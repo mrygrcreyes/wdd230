@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mary Grace Reyes">
+    <meta name="description"
+        content="This is the course assignment portal created by Mary Grace Reyes under WDD 230 - Web Frontend Development">
+    <title>Mary Grace Reyes - WDD 230 - Web Frontend Development</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/larger.css">
+</head>
+
+<body>
+    <header>
+        <!-- EDIT THE IMG IN CSS -->
+        <img src="/images/profile.jpg" alt="Mary Grace Reyes Profile" width="200" height="200">
+        <span class="name">Mary Grace Reyes</span>
+    </header>
+    <nav>
+        <button id="menu" class="dropbtn" onclick="myFunction()"></button>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="index.html" class="active">Home</a>
+            <a href="#">Chamber</a>
+            <a href="#">Site Plan</a>
+            <a href="#">Form</a>
+        </div>
+        <ul class="navigation">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Site Plan</a></li>
+            <li><a href="#">Form</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>WDD 230: Web Frontend Development</h1>
+        <div class="card-container">
+            <section class="card">
+                <h2>Learning Activities</h2>
+                <ul class="card-1">
+                    <li>Week 01: <a href="#" target="_blank">Layout | Media Query | JS Pen </a></li>
+                    <li>Week 01: <a href="#" target="_blank"></a></li>
+                    <li>Week 01: <a href="#" target="_blank"></a></li>
+                    <li>Week 01: <a href="#" target="_blank"></a></li>
+                    <li>Week 01: <a href="#" target="_blank"></a></li>
+                    <li>Week 01: <a href="#" target="_blank"></a></li>
+                    <li>Week 01: <a href="#" target="_blank"></a></li>
+
+                </ul>
+            </section>
+            <section class="card">
+                <h2>Information</h2>
+                <div class="card-2">
+                    <h4>Weather</h4>
+                    <h4>Page Visits: </h4>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <!-- ADD FLAG -->
+        <p>&copy; <span id="year"></span> Mary Grace Reyes Philippines</p>
+        <!-- will be populated with JavaScript code -->
+        <p id="lastModified"></p>
+    </footer>
+    <script src="scripts/getdates.js"></script>
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function (event) {
+            if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
