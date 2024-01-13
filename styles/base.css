@@ -1,15 +1,12 @@
-/* temporarily color scheme:
-header: #F2D4D6
-hover: #F2E6D6
-nav : #FB8DA0
-nav a : #213F99 - font
+:root {
+    --background-color: #FEF6C9;
+    --header-color:#F3D972;
+    --font-color: #351F13;
+    --menu-color: #c0c0c0;
+    --hover-color: #F4E8D2;
+}
 
-  font-family: "Lato",
-  sans-serif;
-  font-weight: 300;
-  font-style: normal;
 
-*/
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +24,7 @@ header {
     justify-content: center;
     padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1); */
-    background-color: #FEF6C9;
+    background-color: var(--background-color);
 }
 
 img {
@@ -37,7 +34,7 @@ img {
 
 .name {
     /* font-family: "Roboto", sans-serif; */
-    font-weight: 700;
+    font-weight: 900;
     font-size: 2.5rem;
     margin-left: 0;
     text-align: center;
@@ -48,7 +45,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
-    color: #351F13;
+    color: var(--font-color);
 }
 
 main {
@@ -61,7 +58,7 @@ main {
     max-width: 800px;
     list-style-type: none;
     text-align: center;
-    background-color: #c0c0c0;
+    background-color: var(--menu-color);
     font-family: "Roboto", sans-serif;
     font-size: larger;
     text-decoration: none;
@@ -79,16 +76,16 @@ h1 {
 
 
 nav {
-    background-color: #F3D972;
+    background-color: var(--header-color);
     /* margin: 0 auto;
     max-width: 800px; */
     margin-bottom: 20px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 nav a {
     display: block;
-    color: #351F13;
+    color: var(--font-color);
     text-align: center;
     padding: 1rem;
     text-decoration: none;
@@ -96,7 +93,7 @@ nav a {
 
 nav a:hover {
     text-decoration: underline;
-    color: #F3E1C0;
+    color: var(--hover-color);
 }
 
 .active {
@@ -110,15 +107,15 @@ nav a:hover {
 }
 
 .card {
-    background-color: #FEF6C9;
+    background-color: var(--background-color);
     border: #004e98;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .card h2 {
     font-size: 1.5rem;
-    color: #351F13;
-    background-color: #F3D972;
+    color: var(--font-color);
+    background-color: var(--header-color);
     padding: 1rem;
     margin: auto;
 }
@@ -145,7 +142,7 @@ nav a:hover {
 
 footer {
     margin: auto;
-    background-color: #F3D972;
+    background-color: var(--header-color);
     max-width: 800px;
     text-align: center;
 }
@@ -192,7 +189,7 @@ nav {
     font-size: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 3px 7px 6px;
-    background-color: #eee;
+    background-color: var(--menu-color);
     color: #000;
     position: absolute;
     top: 1rem;
@@ -211,7 +208,7 @@ nav {
     display: flex;
     flex-direction: column;
     list-style: none;
-    background-color: #F3D972;
+    background-color: var(--background-color);
     font-weight: 700;
 }
 
@@ -224,12 +221,12 @@ nav {
     padding: 1rem;
     text-align: center;
     text-decoration: none;
-    color: #351F13;
+    color: var(--font-color);
 }
 
 .navigation li a:hover {
-    background-color: #F4E8D2;
-    color: #351F13;
+    background-color: var(--hover-color);
+    color: var(--font-color);
     font-weight: 700;
 }
 
@@ -259,7 +256,7 @@ nav {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #F3D972;
+    background-color: var(--background-color);
     min-width: 600px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -268,14 +265,14 @@ nav {
 }
 
 .dropdown-content a {
-    color: #351F13;
+    color: var(--font-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
 .dropdown a:hover {
-    background-color: #F4E8D2;
+    background-color: var(--hover-color);
 }
 
 .show {
