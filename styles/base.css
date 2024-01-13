@@ -1,9 +1,9 @@
 :root {
     --background-color: #FEF6C9;
-    --header-color:#F3D972;
+    --header-color: #F3D972;
     --font-color: #351F13;
     --menu-color: #c0c0c0;
-    --hover-color: #F4E8D2;
+    --hover-color: #f5e3be;
 }
 
 
@@ -13,34 +13,6 @@
     box-sizing: border-box;
 }
 
-
-header {
-    display: grid;
-    display: grid;
-    margin: auto;
-    max-width: 800px;
-    grid-template-columns: 1fr 1fr;
-    /* align-items: center;
-    justify-content: center;
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.1); */
-    background-color: var(--background-color);
-}
-
-img {
-    /* border-radius: 20%; */
-    margin: auto;
-}
-
-.name {
-    /* font-family: "Roboto", sans-serif; */
-    font-weight: 900;
-    font-size: 2.5rem;
-    margin-left: 0;
-    text-align: center;
-    margin: auto;
-}
-
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -48,38 +20,43 @@ body {
     color: var(--font-color);
 }
 
+/* -----------header----------- */
+
+header {
+    display: grid;
+    display: grid;
+    margin: auto;
+    max-width: 800px;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--background-color);
+}
+
+img {
+    margin: auto;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: auto;
+}
+
+
+/* ------ menu button for mobile view ------ */
+
+
+/* ------ main content ------ */
+
 main {
     max-width: 800px;
     margin: 0 auto;
 }
 
-#menu {
-    margin: auto;
-    max-width: 800px;
-    list-style-type: none;
-    text-align: center;
-    background-color: var(--menu-color);
-    font-family: "Roboto", sans-serif;
-    font-size: larger;
-    text-decoration: none;
-    display: block;
-
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-}
-
-
-h1 {
-    font-size: 2rem;
-}
-
 
 nav {
     background-color: var(--header-color);
-    /* margin: 0 auto;
-    max-width: 800px; */
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     font-weight: 900;
 }
 
@@ -100,6 +77,30 @@ nav a:hover {
     color: black;
 }
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    background-color: var(--header-color);
+    font-weight: 700;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation li a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
+}
+
+.navigation li a:hover {
+    background-color: var(--hover-color);
+}
+
 .card-container {
     flex-direction: column;
     display: flex;
@@ -108,7 +109,6 @@ nav a:hover {
 
 .card {
     background-color: var(--background-color);
-    border: #004e98;
     border-radius: 20px;
 }
 
@@ -147,28 +147,14 @@ footer {
     text-align: center;
 }
 
-/* ul {
-    list-style-type: none;
-} */
 
 
-/* .class {
-    background-color: #ebebeb;
-    border-radius: 10px;
-    border: #004e98;
-    text-align: center;
-} */
-
-/* mobile view **************************/
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ----- mobile view ----- */
 
 h1 {
     font-size: 2rem;
+    margin: 1rem;
+    font-weight: 700;
 }
 
 h2 {
@@ -183,52 +169,6 @@ nav {
     margin: 1rem auto;
 }
 
-
-/* small view navigation */
-#menu {
-    font-size: 1.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    padding: 3px 7px 6px;
-    background-color: var(--menu-color);
-    color: #000;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-}
-
-#menu::before {
-    content: "☰";
-}
-
-#menu.open::before {
-    content: "🔙";
-}
-
-.navigation {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    background-color: var(--background-color);
-    font-weight: 700;
-}
-
-.navigation li {
-    display: none;
-}
-
-.navigation li a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: var(--font-color);
-}
-
-.navigation li a:hover {
-    background-color: var(--hover-color);
-    color: var(--font-color);
-    font-weight: 700;
-}
 
 /* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
 .open li {
@@ -245,22 +185,41 @@ nav {
 } */
 
 
-/* MENU DROPDOWN */
+/* ----- menu button, dropdown-content in mobile view ----- */
 
-/* .dropdown {
-    float: right;
-    position: relative;
-    display: inline-block;
-}  */
+#menu::before {
+    content: "☰";
+}
 
-.dropdown-content {
-    display: none;
+#menu {
+    display: block;
     position: absolute;
-    background-color: var(--background-color);
-    min-width: 600px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 3px 7px 6px;
+    background-color: var(--menu-color);
+    color: #000;
+    top: 1rem;
+    right: 1rem;
+}
+
+/* 
+#menu.open::before {
+    content: "🔙";
+} */
+
+#myDropdown {
+    margin-left: 1rem;
+    max-width: 800px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    right: 0;
+}
+
+.dropdown-content {
+    width: 550px;
+    display: none;
+    position: absolute;
+    background-color: var(--header-color);
     z-index: 1;
 }
 
@@ -271,7 +230,7 @@ nav {
     display: block;
 }
 
-.dropdown a:hover {
+.dropdown-content a:hover {
     background-color: var(--hover-color);
 }
 
