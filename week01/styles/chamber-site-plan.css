@@ -1,0 +1,297 @@
+:root {
+    /* background color */
+    --primary-color: #002242;
+    --secondary-color: #edeefd;
+    --accent-1-color: #BAC0CD;
+    --accent-2-color: #FFC342;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 65%;
+    box-sizing: border-box;
+}
+
+
+body {
+    max-width: 120rem;
+    margin: 0 auto;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.5;
+    background-color: var(--accent-1-color);
+
+}
+
+/* ----- navigation bar and header----- */
+
+nav {
+    background-color: var(--nav-background-color);
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 1.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+
+}
+
+/* nav a:link,
+nav a:visited {
+    color: var(--secondary-color);
+} */
+
+nav a {
+    text-decoration: none;
+    padding: 1em;
+    min-width: 70px;
+    color: var(--primary-color);
+
+}
+
+nav a:hover {
+    text-decoration: underline double var(--accent-2-color)
+}
+
+.header-font {
+    font-size: 3rem;
+}
+
+/* ----- font styling ----- */
+
+body p {
+    padding: 1em;
+}
+
+
+:where(h2, h3, h4, h5, h6) {
+    font-family: "Fira Sans Condensed", sans-serif;
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline wavy var(--accent-2-color);
+}
+
+h3 {
+    text-decoration: underline wavy var(--accent-2-color);
+    margin-block-end: 1rem;
+}
+
+h2,
+h3 {
+    text-underline-offset: 1rem;
+}
+
+header {
+    padding: 1em;
+    text-align: center;
+    background-color: var(--primary-color);
+    font-family: "Fira Sans Condensed", sans-serif;
+    margin-block-end: 2rem;
+}
+
+header :where(h1, h2) {
+    color: var(--accent-2-color);
+    text-decoration: none;
+}
+
+section {
+    margin-block-end: 3rem;
+    border-top: 5px solid var(--bg-text-color);
+    border-bottom: 5px solid var(--bg-text-color);
+    background: var(--secondary-color);
+    backdrop-filter: blur(2rem);
+    box-shadow: 2px 4px 2.5rem 5px #e7e7e75f;
+    padding-block-start: 2rem;
+    border-radius: 5px;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    padding-inline: 2rem;
+    margin-inline-start: 4rem;
+
+}
+
+ul li {
+    margin-block-end: 1rem;
+}
+
+section:not(.color-schema-guide, .typography) {
+    padding-block-end: 1rem;
+}
+
+/* ---- scenario emoji ----- */
+
+.audience ::marker {
+    content: "💭";
+}
+
+/* ---- color scheme ----- */
+
+/* ----- table color ----- */
+.colors {
+    width: 100%;
+    min-width: 400px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors th,
+.colors td {
+    border: 2px solid #000;
+}
+
+.colors th {
+    color: var(--primary-color);
+    background-color: var(--bg-text-color);
+    padding-block: 1rem;
+
+}
+
+.colors td {
+    color: brown;
+    width: 20%;
+    height: 3em;
+}
+
+/* ----- color hex ----- */
+
+.primary {
+    background-color: var(--primary-color);
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent-1 {
+    background-color: var(--accent-1-color);
+}
+
+.accent-2 {
+    background-color: var(--accent-2-color);
+}
+
+/* -----typography ----- */
+
+.typography p:first-of-type {
+    background-color: var(--secondary-color);
+}
+
+.typography :nth-child(3) {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ----- colored paragraph ----- */
+.colored {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+/* ----- logo ----- */
+.logo img {
+    margin-block: 1em;
+}
+
+.site-map h2 {
+    margin-block-end: 2rem;
+}
+
+.sitemap {
+    display: grid;
+    justify-content: center;
+    gap: 1.5rem;
+
+    grid-template-columns: repeat(6, 15%);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        ". . page1 page1  .  .  "
+        ". page2 page2 page3 page3 ."
+        ". . page4 page4  . . ";
+}
+
+.sitemap div {
+    text-align: center;
+    background-color: var(--accent-1-color);
+    line-height: 3em;
+}
+
+/* ----- sitemap-navigation ----- */
+
+.navigation {
+    background-color: var(--primary-color);
+    line-height: 2em;
+    margin: auto;
+    text-align: center;
+    font-size: 1.2em;
+    list-style-type: none;
+}
+
+.navigation a {
+    color: var(--accent-2-color);
+}
+
+.navigation a:hover {
+    text-decoration: underline double var(--accent-1-color)
+}
+
+.page1 {
+    grid-area: page1;
+}
+
+.page2 {
+    grid-area: page2;
+}
+
+.page3 {
+    grid-area: page3;
+}
+
+.page4 {
+    grid-area: page4;
+}
+
+.placeholder-box {
+    border-radius: 5px;
+    max-width: 60%;
+    margin: 4rem auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) 30% 20%;
+    grid-template-areas: "desktop desktop tablet phone";
+    gap: 2rem;
+
+}
+
+.placeholder-box img {
+    width: 100%;
+}
+
+.home {
+    grid-area: desktop;
+}
+
+.home__tv {
+    grid-area: tablet;
+}
+
+.home__pv {
+    grid-area: phone;
+}
