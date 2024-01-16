@@ -208,6 +208,8 @@ section:not(.color-schema-guide, .typography) {
 /* ----- logo ----- */
 .logo img {
     margin-block: 1em;
+    width: 30%;
+    height: 30%;
 }
 
 .site-map h2 {
@@ -268,16 +270,16 @@ section:not(.color-schema-guide, .typography) {
     grid-area: page4;
 }
 
+
+/* ----- wireframe ------ */
+
 .placeholder-box {
     border-radius: 5px;
-    max-width: 60%;
-    margin: 4rem auto;
-
+    max-width: 90%;
+    margin: 2rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr) 30% 20%;
+    grid-template-columns: repeat(2, 1fr) 30% 25%;
     grid-template-areas: "desktop desktop tablet phone";
-    gap: 2rem;
-
 }
 
 .placeholder-box img {
@@ -288,10 +290,6 @@ section:not(.color-schema-guide, .typography) {
     grid-area: desktop;
 }
 
-.home__tv {
-    grid-area: tablet;
-}
-
-.home__pv {
+.home-mobile {
     grid-area: phone;
 }
