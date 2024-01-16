@@ -132,7 +132,7 @@ ul li {
     margin-block-end: 1rem;
 }
 
-section:not(.color-schema-guide, .typography) {
+section:not(.color-schema, .typography) {
     padding-block-end: 1rem;
 }
 
