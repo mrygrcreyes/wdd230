@@ -25,7 +25,6 @@ body {
 
 header {
     display: grid;
-    display: grid;
     margin: auto;
     max-width: 800px;
     grid-template-columns: 1fr 1fr;
@@ -76,29 +75,10 @@ nav a:hover {
     color: black;
 }
 
-.navigation {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    background-color: var(--header-color);
-    font-weight: 700;
+.active::before {
+    content: "📍 ";
 }
 
-.navigation li {
-    display: none;
-}
-
-.navigation li a {
-    display: block;
-    padding: 1rem;
-    text-align: center;
-    text-decoration: none;
-    color: var(--font-color);
-}
-
-.navigation li a:hover {
-    background-color: var(--hover-color);
-}
 
 .card-container {
     flex-direction: column;
@@ -172,27 +152,7 @@ nav {
 }
 
 
-/* when the button is clicked - the open class is toggle (added/removed) and accounted for here
-.open li {
-    display: block;
-    width: 100%;
-}
-
-.open li a {
-    display: block;
-}
-
-.active::before {
-    content: "📍 ";
-} */
-
-
-/* ----- menu button, dropdown-content in mobile view ----- */
-
-#menu::before {
-    content: "☰";
-}
-
+/* ----- menu button in mobile view ----- */
 #menu {
     display: block;
     position: absolute;
@@ -206,37 +166,50 @@ nav {
     right: 1rem;
 }
 
-/* 
+#menu::before {
+    content: "☰";
+}
+
+
 #menu.open::before {
-    content: "🔙";
-} */
-
-#myDropdown {
-    margin-left: 1rem;
-    max-width: 800px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    content: "✖️";
 }
 
-.dropdown-content {
-    width: 550px;
-    display: none;
-    position: absolute;
+.navigation {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
     background-color: var(--header-color);
-    z-index: 1;
+    font-weight: 700;
 }
 
-.dropdown-content a {
-    color: var(--font-color);
-    padding: 12px 16px;
-    text-decoration: none;
+.navigation li {
+    display: none;
+}
+
+.navigation li a {
     display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--font-color);
 }
 
-.dropdown-content a:hover {
+.navigation li a:hover {
     background-color: var(--hover-color);
 }
 
-.show {
+/* when the button is clicked - the open class is toggle (added/removed) and accounted for here */
+
+.open li {
     display: block;
+    width: 100%;
+}
+
+.open li a {
+    display: block;
+}
+
+.active::before {
+    content: "📍 ";
 }

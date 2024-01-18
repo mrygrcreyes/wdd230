@@ -1,0 +1,13 @@
+main {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#mode {
+    position: absolute;
+    top: 1rem;
+    right: 4rem;
+    font-size: 3rem;
+    cursor: pointer;
+    font-size: 2rem;
+}

@@ -7,14 +7,15 @@
     <meta name="author" content="Mary Grace Reyes">
     <meta name="description"
         content="This is the course assignment portal created by Mary Grace Reyes under WDD 230 - Web Frontend Development">
-    <!-- <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content=""-->
+    <meta property="og:title" content="Mary Grace Reyes - WDD 230 - Web Frontend Development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://www.wur.nl/upload_mm/1/0/4/74f0628e-7351-4812-b6e8-af6883c7648e_laptop%20en%20boek_digitale_bibliotheek_eb8e4305_750x400.jpg" />
+    <meta property="og:url" content="https://mrygrcreyes.github.io/wdd230/" />
     <title>Mary Grace Reyes - WDD 230 - Web Frontend Development</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/larger.css">
     <link rel="icon" href="favicon.ico">
@@ -27,13 +28,8 @@
         <span class="name">Mary Grace Reyes</span>
     </header>
     <nav>
-        <button id="menu" class="dropbtn" onclick="myFunction()" aria-label="Name"></button>
-        <div id="myDropdown" class="dropdown-content">
-            <a href="index.html" class="active">Home</a>
-            <a href="#">Chamber</a>
-            <a href="week01/chamber-site-plan.html" target="_blank">Site Plan</a>
-            <a href="#">Form</a>
-        </div>
+        <div id="mode"> 🕶️ </div>
+        <button id="menu"></button>
         <ul class="navigation">
             <li><a href="index.html" class="active">Home</a></li>
             <li><a href="#">Chamber</a></li>
@@ -52,7 +48,11 @@
                         <a href="https://codepen.io/mrygrcreyes/pen/NWJbYYo" target="_blank"> Applied JavaScript |</a>
                         <a href="week01/media-query.html" target="_blank"> Media Query</a>
                     </li>
-                    <li>Week 02: <a href="week02/design.html" target="_blank"> Design Principle</a></li>
+                    <li>Week 02: <a href="week02/design.html" target="_blank"> Design Principle |</a>
+                        <a href="https://codepen.io/mrygrcreyes/pen/poYPbNL" target="_blank"> Responsive Navigation |
+                        </a>
+                        <a href="week02/bom.html" target="_blank"> B.O.M - DOM Manipulation |</a>
+                    </li>
                     <li>Week 03: <a href="#" target="_blank"></a></li>
                     <li>Week 04: <a href="#" target="_blank"></a></li>
                     <li>Week 05: <a href="#" target="_blank"></a></li>
@@ -75,6 +75,8 @@
         <p id="lastModified"></p>
     </footer>
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/menu.js"></script>
+    <script src="/scripts/normalize.js"></script>
 </body>
 
 </html>
