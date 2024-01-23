@@ -36,7 +36,7 @@
         align-self: self-end;
     }
 
-    :where(nav ul, .nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
+    :where(nav ul, .nav-links, .cta-box, [role="switch"]) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -139,61 +139,10 @@
     }
 
 
-    .services-section {
-        display: grid;
-        place-items: center;
-        row-gap: 10rem;
-        padding-block: 5em 10em;
-    }
-
-    .service-card-box {
-        width: 60%;
-
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: var(--default-gap);
-    }
-
-    .card svg {
-        width: 5rem;
-        height: 5rem;
-        fill: var(--default-shade-2);
-    }
-
-    .card {
-        background-color: #fff;
-    }
-
-    .card:hover {
-        background-color: var(--secondary-color);
-    }
-
-    .card:hover svg {
-        fill: var(--primary-color);
-    }
-
-
-    .explore {
-        flex-direction: row;
-        gap: 0;
-    }
-
-    .mini-gallery-box {
-        width: 50%;
-    }
-
-    .explore-text-box {
-        width: 35%;
-    }
-
     footer:not(.copyright-box) {
         align-items: flex-start;
         flex-direction: row;
         flex-flow: wrap;
         text-align: left;
-    }
-
-    .footer-social-links:hover svg {
-        fill: var(--default-color);
     }
 }

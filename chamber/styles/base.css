@@ -1,6 +1,4 @@
-/* Custom CSS Properties */
 :root {
-    /* Project colors */
 
     --primary-color: #002242;
     --secondary-color: #FFC342;
@@ -18,7 +16,6 @@
     --default-gap: 2em;
     --default-gap: 1em;
 
-    /* change the values below to your chosen font(s) */
     --heading-font: "Fira Sans Condensed", sans-serif;
     --paragraph-font: "Poppins", sans-serif;
 
@@ -33,7 +30,8 @@
     box-sizing: inherit;
 }
 
-/* base settings */
+/* Base settings */
+
 html {
     font-size: 50%;
     box-sizing: border-box;
@@ -85,10 +83,6 @@ nav ul {
     align-items: center;
 }
 
-svg {
-    height: 3rem;
-    width: 3rem;
-}
 
 /* ---------------------- HOME PAGE SECTION --------------- */
 
@@ -211,7 +205,7 @@ svg {
 .nav-links:hover {
     color: var(--secondary-color);
     background-color: var(--primary-color);
-    fill: var(--secondary-color);
+    /* fill: var(--secondary-color); */
 }
 
 .nav-links,
@@ -236,16 +230,13 @@ svg {
 
 .menu-btn,
 .fa-bars {
-    fill: var(--secondary-color);
+    color: white;;
 }
 
 .show-nav {
     display: block;
 }
 
-.fa-bars {
-    color: white;
-}
 
 /* ----------------HEADER INTRO/MOTTO-------------------- */
 .header-box {
@@ -505,7 +496,7 @@ svg {
     /* overflow: hidden; */
     padding-block: 2em;
     background-color: #ffffff;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23eef0f4' fill-opacity='1'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
+    /* background-image: url(); */
 
 }
 
@@ -556,9 +547,6 @@ footer ul {
     list-style: none;
 }
 
-footer svg {
-    fill: #444444d1;
-}
 
 .contact-box,
 .quick-link-box,
