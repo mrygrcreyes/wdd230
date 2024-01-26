@@ -302,17 +302,6 @@ nav ul {
     right: -2rem;
 }
 
-/* .socials-box {
-    width: 30rem;
-    padding-block: .5em;
-    justify-content: space-evenly;
-    justify-self: center;
-    box-shadow: var(--box-shadow-effect);
-}
-
-.social-links:hover {
-    fill: var(--default-color);
-} */
 
 :where(nav, .header-intro) {
     background: var(--glass-effect-bg);
@@ -604,11 +593,22 @@ address a:hover,
     gap: 1rem;
 }
 
-
-/* ----------------------------------------------------- */
 /* ---------------------- DISCOVER PAGE SECTION --------------- */
-/* ----------------------------------------------------- */
+.header-1 {
+    /* width: 70%; */
+    margin: 1em auto;
+    grid-row: 2 / 3;
+    grid-column: 1 / span 4;
+    justify-self: center;
+}
 
+.title-1 {
+    padding-inline: 2em;
+    padding-block: 1em;
+    box-shadow: var(--box-shadow-all-4sides);
+    justify-content: center;
+    text-align: center;
+}
 .discover-page-body header {
     background-color: var(--tertiary-color);
 }
@@ -797,13 +797,6 @@ iframe {
     margin-block-end: 1rem;
 }
 
-/* .title h1 {
-    text-align: center;
-    font-family: var(--heading-font);
-    text-decoration: 2px underline double var(--primary-color);
-    margin-block-end: 1rem;
-} */
-
 .explore-photos-box picture {
     width: 80%;
     justify-self: center;
@@ -876,3 +869,4 @@ iframe {
 .population-info {
     flex-direction: column;
 }
+
