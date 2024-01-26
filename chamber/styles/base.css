@@ -820,7 +820,7 @@ iframe {
     background-color: var(--tertiary-color);
 }
 
-figcaption {
+.figcaption {
     text-align: center;
     font-family: var(--heading-font);
     font-weight: 700;
