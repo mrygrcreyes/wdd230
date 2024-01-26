@@ -789,7 +789,15 @@ iframe {
     justify-self: center;
 }
 
-.about-rizal-box h1 {
+.about-rizal-box h3 {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-size: 2.5rem;
+    text-decoration: 2px underline double var(--primary-color);
+    margin-block-end: 1rem;
+}
+
+.title {
     text-align: center;
     font-family: var(--heading-font);
     text-decoration: 2px underline double var(--primary-color);
