@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mary Grace Reyes">
+    <meta name="description"
+        content="TThe non-profit Rizal Chamber of Commerce works to support the business community of Rizal.">
+    <!-- edit the social media meta -->
+    <meta property="og:title" content="Mary Grace Reyes - Rizal Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://www.pexels.com/photo/person-standing-infront-of-a-display-window-3056059/">
+    <meta property="og:url" content="https://mrygrcreyes.github.io/wdd230/">
+    <title>Rizal Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+    <link rel="icon" href="favicon-chamber.ico">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+</head>
+
+<body class="discover-page-body">
+    <header>
+        <!-- mobile view -->
+        <button class="menu-btn" aria-label="Toggle menu button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="logo-box">
+            <a href="index.html"><img src="images/chamber-logo.webp" alt="Rizal Chamber of Commerce logo" class="logo">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-links"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="discover.html" class="nav-links"><i class="fa-solid fa-magnifying-glass"></i>
+                        DISCOVER</a></li>
+                <li><a href="directory.html" class="nav-links"><i class="fa-solid fa-folder"></i> DIRECTORY</a></li>
+                <li><a href="join.html" class="nav-links"><i class="fa-solid fa-user"></i> JOIN</a></li>
+            </ul>
+            <!-- dark mode -->
+            <div aria-label="Light and dark mode toggle switch" role="switch" aria-checked="false" tabindex="0">
+                <span class="switch">
+                    <span></span>
+                </span>
+                <span class="off" aria-hidden="true">
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+
+                <span class="on" aria-hidden="true">
+                    <i class="fa-solid fa-moon"></i>
+                </span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="banner-section">
+            <div class="banner-image-box">
+                <picture>
+                    <source media="(max-width: 900px)" srcset="images/capitol.webp">
+                    <img src="images/capitol.webp" alt="Photo of Rizal Capitol" width="1000" height="500"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 900px)" srcset="images/higantes-festival.webp">
+                    <img src="images/higantes-festival.webp" alt="Photo of Higantes Festival in Rizal" width="1000"
+                        height="500" loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 900px)" srcset="images/tourist-spot-1.webp">
+                    <img src="images/tourist-spot-1.webp" alt="Photo of tourist spot in Rizal" width="1000" height="500"
+                        loading="lazy">
+                </picture>
+            </div>
+        </section>
+
+        <section class="info-section-grid">
+            <div class="sidebar-box">
+                <div class="message-box sidebar-info">
+                    <p> Welcome! Let us know if you have any questions</p>
+                </div>
+                <div class="population-info sidebar-info">
+                    <div>
+                        <img src="#" alt="Graph population in Rizal" width="288" height="250" loading="lazy">
+                    </div>
+                    <ul>
+                        <li><strong>Population: </strong>...</li>
+                        <li><strong>Demographic: </strong>...</li>
+                        <li><strong>Education: </strong>...</li>
+                    </ul>
+                </div>
+                <div class="blog-post sidebar-info">
+                    <div class="heading-intro">
+                        <h2>Rizal Blog Post</h2>
+                        <!-- add icons -->
+                    </div>
+                    <p class="message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla laborum dolores, temporibus
+                        obcaecati sapiente fugiat corporis excepturi tenetur quisquam, in nostrum? Vitae sint, odio
+                        aliquam dolor repellendus at hic accusantium?. <a href="#">Learn more</a>
+                    </p>
+
+                </div>
+                <div class="karaoke-post sidebar-info">
+                    <div class="heading-intro">
+                        <h2>Celebration Week</h2>
+                        <!-- add icon -->
+                    </div>
+                    <p class="message">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum omnis magni architecto
+                        voluptatem excepturi veniam qui quo corrupti vel corporis inventore nostrum, culpa asperiores
+                        aliquid explicabo aliquam. Accusantium, excepturi eveniet? <a href="#">Learn more</a>
+                    </p>
+
+                </div>
+
+                <div class="calender">
+                    <div class="header">
+                        <div class="the-date">January 2024 </div>
+                        <!-- <div class="btns">
+                            <svg class="today">
+                                <use xlink:href="images/sprite.svg#icon-new-message"></use>
+                            </svg>
+                            <svg class="prev-btn">
+                                <use xlink:href="images/sprite.svg#icon-chevron-with-circle-left"></use>
+                            </svg>
+                            <svg class="next-btn">
+                                <use xlink:href="images/sprite.svg#icon-chevron-with-circle-right"></use>
+                            </svg>
+                        </div> -->
+                    </div>
+                    <div class="weekdays">
+                        <ul>
+                            <li class="day">Sun</li>
+                            <li class="day">Mon</li>
+                            <li class="day">Tue</li>
+                            <li class="day">Wed</li>
+                            <li class="day">Thu</li>
+                            <li class="day">Fri</li>
+                            <li class="day">Sat</li>
+                        </ul>
+                    </div>
+                    <div class="days">
+                        <div class="day prev">31</div>
+                        <div class="day">1</div>
+                        <div class="day">2</div>
+                        <div class="day">3</div>
+                        <div class="day">4</div>
+                        <div class="day">5</div>
+                        <div class="day">6</div>
+                        <div class="day">7</div>
+                        <div class="day">8</div>
+                        <div class="day">9</div>
+                        <div class="day">10</div>
+                        <div class="day">11</div>
+                        <div class="day">12</div>
+                        <div class="day">13</div>
+                        <div class="day">14</div>
+                        <div class="day">15</div>
+                        <div class="day">16</div>
+                        <div class="day">17</div>
+                        <div class="day">18</div>
+                        <div class="day">19</div>
+                        <div class="day">20</div>
+                        <div class="day">21</div>
+                        <div class="day">22</div>
+                        <div class="day">23</div>
+                        <div class="day">24</div>
+                        <div class="day">25</div>
+                        <div class="day">26</div>
+                        <div class="day today">27</div>
+                        <div class="day">28</div>
+                        <div class="day">29</div>
+                        <div class="day">30</div>
+                        <div class="day">31</div>
+                        <div class="day next">1</div>
+                        <div class="day next">2</div>
+                        <div class="day next">3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="map-box">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3861.7027449174693!2d121.13319977510535!3d14.558983735922451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d14.5592159!2d121.1355657!4m5!1s0x3397c71b30c82813%3A0xf5e02302ae65c580!2sTaytay%2C%20Rizal!3m2!1d14.558554899999999!2d121.1360819!5e0!3m2!1sen!2sph!4v1706152330145!5m2!1sen!2sph"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+
+            </div>
+            <div class="explore-photos-box">
+                <div class="about-lynnwood-box">
+                    <h3>About Rizal</h3>
+                    <p>
+                        Nestled in the center of Luzon, Rizal Province is a dynamic representation of the Philippines'
+                        vibrant history, stunning scenery, and rich cultural heritage. Rizal Province is a vibrant
+                        province that borders Metro. It offers an
+                        enticing combination of urban energy and rural peacefulness, making it a gateway to the
+                        archipelago's natural treasures and cultural history.
+                        Discovering the Province of Rizal inspires you to welcome the extraordinary. It's an exploration
+                        journey challenging undulating terrains, rustic markets that showcase local craftsmanship, and a
+                        festival bursting with color and life. Full
+                        of vitality and color. Every trip to Rizal Province reveals a new aspect of its complex appeal,
+                        offering meaningful encounters and enduring memories.
+                    </p>
+                </div>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/hamaka-festival.webp">
+                    <img src="images/hamaka-festival.webp" alt="Photo of Hamaka Festival" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/food-1.webp">
+                    <img src="images/food-1.webp" alt="Food Specialty of Rizal" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/museum.webp">
+                    <img src="images/museum.webp" alt="Pinto Art Museum in Rizal" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/tourist-spot.webp">
+                    <img src="images/tourist-spot.webp" alt="Tourist spot in Rizal" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/market.webp">
+                    <img src="images/market.webp" alt="Tiannge Market in Rizal" width="1500" height="750"
+                        loading="lazy">
+                </picture>
+                <picture>
+                    <source media="(max-width: 600px)" srcset="images/crafts.webp">
+                    <img src="images/crafts.webp" alt="Craftmanship in Rizal" width="1500" height="750" loading="lazy">
+                </picture>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="contact-box">
+            <p class="footer-captions">Contact Us</p>
+            <address>
+                <a href="marlane@buenamano.com.ph">📧 marlane@buenamano.com.ph</a>
+                <!-- <br> -->
+                <a href="tel:+660-6131">📞 660-6131</a>
+                <p>📍 309, Fairtrade Commercial Center,</p>
+                <p>Ortigas Ave. Extension Cainta</p>
+                <p>Philippines</p>
+            </address>
+        </div>
+        <div class="quick-link-box">
+            <p class="footer-captions">Quick Links</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <p class="footer-captions">Stay Connected</p>
+            <ul>
+                <li><a href="#" target="_blank" class="footer-social-links" aria-label="Rizal Chamber LinkedIn account">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a></li>
+                <li><a href="#" target="_blank" class="footer-social-links" aria-label="Rizal Chamber Facebook page">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="copyright-box">
+            <p>&copy; <span id="year"></span> Mary Grace Reyes - WDD230 Web Frontend Development - Philippines</p>
+            <p>Last modified: <span class="last-modify"></span></p>
+            <p id="analytics"></p>
+        </div>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+</body>
+
+</html>
