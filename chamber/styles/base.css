@@ -797,12 +797,12 @@ iframe {
     margin-block-end: 1rem;
 }
 
-.title h1 {
+/* .title h1 {
     text-align: center;
     font-family: var(--heading-font);
     text-decoration: 2px underline double var(--primary-color);
     margin-block-end: 1rem;
-}
+} */
 
 .explore-photos-box picture {
     width: 80%;
