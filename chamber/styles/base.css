@@ -827,45 +827,45 @@ figcaption {
     font-size: 2rem;
 }
 
-@media only screen and (min-width: 37.5em) {
-    .logo-box {
-        width: 15rem;
-    }
 
-    /* ----------- DISCOVER PAGE SECTION---------- */
-    .banner-image-box {
-        display: flex;
-    }
+.logo-box {
+    width: 15rem;
+}
 
-    .banner-image-box picture {
-        width: 100%;
-    }
+/* ----------- DISCOVER PAGE SECTION---------- */
 
-    .banner-image-box img {
-        width: 100%;
-        height: auto;
-    }
+.banner-image-box {
+    display: flex;
+}
 
-    .sidebar-box {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-auto-rows: 1fr;
-        padding-inline: 1em;
-    }
+.banner-image-box picture {
+    width: 100%;
+}
 
-    .sidebar-info,
-    .calender {
-        width: 100%;
-        height: 100%;
-    }
+.banner-image-box img {
+    width: 100%;
+    height: auto;
+}
 
-    .sidebar-info {
-        grid-auto-rows: min-content;
-        place-content: center;
-        gap: 2em;
-    }
+.sidebar-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    padding-inline: 1em;
+}
 
-    .population-info {
-        flex-direction: column;
-    }
+.sidebar-info,
+.calender {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar-info {
+    grid-auto-rows: min-content;
+    place-content: center;
+    gap: 2em;
+}
+
+.population-info {
+    flex-direction: column;
 }
