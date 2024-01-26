@@ -784,12 +784,12 @@ iframe {
     padding-block: 1.5em;
 }
 
-.about-lynnwood-box {
+.about-rizal-box {
     width: 80%;
     justify-self: center;
 }
 
-.about-lynnwood-box h3 {
+.about-rizal-box h3 {
     text-align: center;
     font-family: var(--heading-font);
     font-size: 2.5rem;
@@ -820,6 +820,12 @@ iframe {
     background-color: var(--tertiary-color);
 }
 
+figcaption {
+    text-align: center;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    font-size: 2rem;
+}
 
 @media only screen and (min-width: 37.5em) {
     .logo-box {
