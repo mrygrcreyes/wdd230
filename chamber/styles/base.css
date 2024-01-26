@@ -57,7 +57,7 @@ body {
 .homepage-body header {
     /* padding-inline: 2rem; */
     padding-block-end: 2rem;
-    background: url(../images/hero-img.jpg);
+    background: url(../images/hero-img.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

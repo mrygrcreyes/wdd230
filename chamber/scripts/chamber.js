@@ -59,53 +59,6 @@ function activePage() {
 }
 activePage();
 
-/////////////////// HOME PAGE SECTION ////////////////////
-//////////////////////////////////////////////////////////
-// The weather forecast functionality. Displaying the weather
-// forecast to the user
-// function weatherForecast() {
-//     const lat = -25.74433236181061;
-//     const long = 28.234333823643258;
-//     const apiKey = '0b6396ec51390424c164a6782f787117';
-
-//     const currentTemp = document.querySelector('#current-temp');
-//     const weatherIcon = document.querySelector('#weather-icon');
-//     const captionDesc = document.querySelector('#description');
-//     const windSpeed = document.querySelector('#windspeed');
-//     const windDirection = document.querySelector('#wind-direction');
-
-//     const weatherUrl = ``;
-
-//     const forecastUrl = ``;
-
-//     const apiFetch = async function () {
-//         try {
-//             const response1 = await fetch(weatherUrl);
-//             if (response1.ok) {
-//                 const weatherData = await response1.json();
-//                 displayResults(weatherData)
-//             } else {
-//                 throw Error(await response1.text());
-//             }
-//         } catch (error) {
-//             console.log(error);
-//         }
-//     }
-
-//     function displayResults(data) {
-//         currentTemp.innerHTML = `${data.main.temp}&deg;C`;
-//         const iconsrc = ``;
-//         let desc = data.weather[0].description;
-//         weatherIcon.setAttribute('src', iconsrc);
-//         weatherIcon.setAttribute('alt', 'weather-icon');
-//         captionDesc.textContent = `${desc}`;
-//         windSpeed.textContent = data.wind.speed;
-//         windDirection.innerHTML = `${data.wind.deg}&deg;`
-//     }
-//     apiFetch();
-// }
-// weatherForecast();
-
 
 
 // ////////////////////////////////////////////////////////////
