@@ -38,7 +38,19 @@
             <li><a href="#">Form</a></li>
         </ul>
     </nav>
+
     <main>
+        <figure>
+            <picture>
+                <source media="(max-width: 400px)" srcset="./week03/images/manila-temple-small.webp">
+                <source media="(max-width: 960px)" srcset="./week03/images/manila-temple-large.webp">
+                <img src="./week03/images/manila-temple-large.webp" alt="Photo of Manila Temple" width="800"
+                    height="500" loading="lazy">
+            </picture>
+            <figcaption>Manila Philippines Temple</figcaption>
+        </figure>
+
+
         <h1>WDD 230: Web Frontend Development</h1>
         <div class="card-container">
             <section class="card">
@@ -62,12 +74,20 @@
 
                 </ul>
             </section>
+
             <section class="card">
                 <h2>Information</h2>
                 <div class="card-2">
                     <h4>Weather</h4>
-                    <h4>Page Visits: </h4>
+                    <p><span class="label">Number of Visits: </span><span class="visits"></span></p>
                 </div>
+            </section>
+
+            <section class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d3861.7027449174693!2d121.13319977510535!3d14.558983735922451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d14.5592159!2d121.1355657!4m5!1s0x3397c71b30c82813%3A0xf5e02302ae65c580!2sTaytay%2C%20Rizal!3m2!1d14.558554899999999!2d121.1360819!5e0!3m2!1sen!2sph!4v1706152330145!5m2!1sen!2sph"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </section>
         </div>
     </main>
@@ -78,6 +98,7 @@
     <script src="scripts/getDates.js"></script>
     <script src="scripts/menu.js"></script>
     <script src="scripts/normalize.js"></script>
+    <script src="/scripts/visitCounter.js"></script>
 </body>
 
 </html>

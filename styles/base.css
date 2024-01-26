@@ -38,7 +38,7 @@ img {
 .name {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     margin: auto;
 }
@@ -118,6 +118,10 @@ nav a:hover {
     padding: 1rem;
     text-align: center;
 }
+
+/* .label, h4 {
+    font-size: 1.5rem;
+} */
 
 footer {
     margin: auto;
@@ -212,4 +216,36 @@ nav {
 
 .active::before {
     content: "📍 ";
+}
+
+figure {
+    position: relative;
+}
+
+/* figure {
+    margin-block-end: 1em;
+} */
+
+figure img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    position: absolute;
+    bottom: 2%;
+    left: 10%;
+    transform: translate(-10%, -10%);
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.758);
+    padding-inline: 2rem;
+    /* padding-block: 2em; */
+    font-weight: 600;
+    /* text-shadow: -1rem 2px 2rem; */
+    font-size: 1rem;
+}
+
+iframe {
+    width: 100%;
+    margin-top: 1rem;
 }

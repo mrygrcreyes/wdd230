@@ -132,3 +132,4 @@ function displayDate() {
     lastModify.textContent = `${getDate().date} - ${getDate().time}`;
 };
 displayDate();
+
