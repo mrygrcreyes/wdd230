@@ -12,7 +12,7 @@
     <meta property="og:image"
         content="https://www.wur.nl/upload_mm/1/0/4/74f0628e-7351-4812-b6e8-af6883c7648e_laptop%20en%20boek_digitale_bibliotheek_eb8e4305_750x400.jpg">
     <meta property="og:url" content="https://mrygrcreyes.github.io/wdd230/">
-    <title>Mary Grace Reyes - WDD 230 - Web Frontend Development</title>
+    <title>Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Roboto&display=swap" rel="stylesheet">
@@ -41,7 +41,8 @@
     <main>
         <form action="record.html" method="get">
             <label class="is-passwd-same"></label>
-            <label>Username* <input type="text" name="username" id="username" required placeholder="Please enter your full name"></label>
+            <label>Username* <input type="text" name="username" id="username" required
+                    placeholder="Please enter your full name"></label>
 
             <label>Password* <input type="password" name="password" id="password" required pattern="\S{8,}"
                     title="(at least 8 characters, no spaces)" placeholder="At least 8 characters, no spaces"></label>
@@ -50,45 +51,27 @@
                     pattern="\S{8,}" title="(at least 8 characters, no spaces)"></label>
 
             <label>Email* <input type="email" name="email" id="email" pattern="[a-zA-Z0-9._%+-]+@byui\.edu$"
-                    title="Please enter a valid email address" required placeholder="Please use your school email address"></label>
+                    title="Please enter a valid email address" required
+                    placeholder="Please use your school email address"></label>
 
-            <fieldset class="emotion-rating">
-            
-                <!-- INPUTS -->
-                <input name="rating" value="1" type="radio" id="rating1">
-                <input name="rating" value="2" type="radio" id="rating2">
-                <input checked name="rating" value="3" type="radio" id="rating3">
-                <input name="rating" value="4" type="radio" id="rating4">
-                <input name="rating" value="5" type="radio" id="rating5">
-            
-            
-                <!-- LABELS -->
-                <div class="labels">
-                    <label title="Sad" aria-describedby="SadTooltip" for="rating1">
-                        <span aria-hidden="true" class="star">😞</span>
-                    </label>
-                    <label title="Not happy" aria-describedby="NotHappyTooltip" for="rating2">
-                        <span aria-hidden="true" class="star">😒</span>
-                    </label>
-                    <label title="Neutral" aria-describedby="NeutralTooltip" for="rating3">
-                        <span aria-hidden="true" class="star">😐</span>
-                    </label>
-                    <label title="Happy" aria-describedby="HappyTooltip" for="rating4">
-                        <span aria-hidden="true" class="star">😊</span>
-                    </label>
-                    <label title="Ecstatic" aria-describedby="EcstaticTooltip" for="rating5">
-                        <span aria-hidden="true" class="star">😁</span>
-                    </label>
-                </div>
-            
-                <!-- TOOLTIPS -->
-                <div class="tooltip" id="SadTooltip">😞 Worst</div>
-                <div class="tooltip" id="NotHappyTooltip">😒 Poor</div>
-                <div class="tooltip" id="NeutralTooltip">😐 Average</div>
-                <div class="tooltip" id="HappyTooltip">😊 Good</div>
-                <div class="tooltip" id="EcstaticTooltip">😁 Excellent</div>
-            
-            </fieldset>
+            <label>Page Rating
+                <input type="range" name="page-rating" id="page-rating" min="0" max="10" value="0" step="1"
+                    list="rangevalue">
+                <datalist id="rangevalue">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </datalist>
+            </label>
+
 
             <input type="submit" value="Post Your Rating">
         </form>
