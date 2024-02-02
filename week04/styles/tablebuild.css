@@ -1,0 +1,86 @@
+:root {
+    --table-head1-bg: #eac639;
+    --table-head2-bg: #ffee90;
+    --box-shadow-all-4sides-cleaner: 0 0 2rem -5px rgba(0, 0, 0, 0.18);
+    --border-line: 2px solid #98989896;
+    --font-style: "Roboto", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eef0f4;
+}
+
+main {
+    height: 100dvh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+caption {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--font-style);
+}
+
+table {
+    box-shadow: var(--box-shadow-all-4sides-cleaner);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+
+thead tr :where([scope="colgroup"], [scope="col"]) {
+    padding-block: 1em;
+    padding-inline: 1em;
+    font-family: var(--font-style);
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+thead :first-child,
+thead :last-child:nth-child(1) {
+    background-color: var(--table-head1-bg);
+    color: #351F13;
+}
+
+thead :last-child:not(:nth-child(1)) {
+    background-color: var(--table-head2-bg);
+    color: #351F13;
+}
+
+tbody tr>td {
+    padding-block: .5em;
+    padding-inline: 1em;
+    font-family: var(--font-style);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #351F13;
+}
+
+thead :where(:first-child th, :last-child th),
+tbody tr>td {
+    border-left: var(--border-line);
+}
+
+table tr {
+    border-bottom: var(--border-line);
+    border-right: var(--border-line);
+}
+
+tbody tr:nth-child(even) {
+    background-color: #89837d75;
+}
+
+@media only screen and (min-width: 37.5em) {
+    table {
+        max-width: 60rem;
+        width: 45rem;
+    }
+}
