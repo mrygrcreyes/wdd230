@@ -609,6 +609,7 @@ address a:hover,
     justify-content: center;
     text-align: center;
 }
+
 .discover-page-body header {
     background-color: var(--tertiary-color);
 }
@@ -870,3 +871,180 @@ iframe {
     flex-direction: column;
 }
 
+
+/* ---------------------- JOIN PAGE SECTION --------------- */
+
+
+.join-page-body section,
+.thankyou-page-body {
+    background-color: var(--default-color);
+}
+
+.join-page-body section {
+    padding: 3em 2em;
+}
+
+.join-page-body .join-cta-text {
+    font-family: var(--paragraph-font);
+    font-style: italic;
+    border-radius: 5px;
+    padding: 1em 1.5em;
+}
+
+.form-container {
+    display: grid;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    gap: 2rem;
+}
+
+
+.form-container form {
+    width: 100%;
+    padding-inline: 1em;
+    padding-block-start: .75em;
+    padding-block-end: 1.5em;
+    border-radius: .5rem;
+
+    display: grid;
+    background: var(--glass-effect-bg);
+    backdrop-filter: var(--blur-effect);
+    box-shadow: var(--box-shadow-all-4sides);
+
+}
+
+.form-container form label.top {
+    display: block;
+    margin-block-start: 2.5rem;
+}
+
+.form-container form div,
+.side-by-side {
+    display: block;
+}
+
+.form-container form div {
+    margin-block-start: 2.5rem;
+    /* margin-block-end: .5rem; */
+}
+
+.side-by-side {
+    padding-block-start: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.form-container input[type="radio"] {
+    width: 2rem;
+    height: 2rem;
+}
+
+
+.asterisk {
+    color: black;
+}
+
+.form-container form input:not([type="radio"]) {
+    width: 100%;
+    max-width: 35rem;
+    height: 4.4rem;
+}
+
+.form-container form label.top input:required {
+    outline: 1px solid black
+}
+
+.form-container form label.top input:required:valid {
+    outline-color: lime;
+}
+
+.form-container textarea {
+    resize: vertical;
+    width: 100%;
+    max-width: 35rem;
+}
+
+.form-container form input:not([type="radio"]),
+.form-container form textarea {
+    display: block;
+    color: #555;
+    font-size: max(1.8rem, 1em);
+    padding: 0.25em 0.5em;
+    border: 1px solid rgb(185, 181, 181);
+    border-radius: 4px;
+}
+
+.form-container form input:not(textarea) {
+    line-height: 1;
+}
+
+.form-container form input:focus:not([type="radio"]),
+.form-container form textarea:focus {
+    border-color: var(--tertiary-color);
+    box-shadow: 0 0 0 3px hsla(245, 100%, calc(42% + 40%), 0.8);
+    outline: 3px solid transparent;
+    transition: 180ms box-shadow ease-in-out;
+}
+
+.form-container form input[type="submit"] {
+    border: none;
+    color: white;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 1rem;
+    padding-block: .75rem;
+    padding-inline: 1.5rem;
+    box-shadow: var(--box-shadow-effect);
+
+}
+
+.benefits-box div {
+    background-color: #fff;
+    width: 80%;
+    padding-block: 2.5em;
+    padding-inline: 2.5em;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+
+.benefits-box h2 {
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    text-align: center;
+    margin-block-end: 1rem;
+}
+
+.benefits-box ul {
+    list-style: none;
+    margin-inline-start: 1.5rem;
+}
+
+.benefits-box ul ::marker {
+    content: "✓ ";
+}
+
+.thankyou-page-body section p {
+    font-size: 2rem;
+    background-color: #fff;
+    padding: 1em 0.75em;
+}
+
+.form-box form {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.form-box form .benefits-box {
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+}
+
+.form-box form .benefits-box div {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}

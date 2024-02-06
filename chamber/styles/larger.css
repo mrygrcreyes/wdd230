@@ -147,9 +147,9 @@
         text-align: left;
     }
 
-    /* ----------------------------------------------------- */
+    
     /* ---------------------- DISCOVER PAGE SECTION --------------- */
-    /* ----------------------------------------------------- */
+    
     .discover-page-body header,
     .join-page-body header,
     .directory-page-body header {
@@ -217,5 +217,31 @@
     .days .day:not(.prev):not(.next):hover {
         transform: scale(1.05);
         background-color: var(--secondary-color);
+    }
+
+    /* ---------------------- JOIN PAGE SECTION --------------- */
+    .form-container {
+        justify-content: space-evenly;
+    }
+
+    .form-container form input[type="submit"]:hover {
+        background-color: var(--secondary-color);
+        color: var(--primary-color);
+    }
+
+    .form-container form input[type="submit"]:active {
+        box-shadow: none;
+    }
+
+    .join-page-body .join-cta-text {
+        width: 70vw;
+        margin: 0 auto 3em;
+    }
+
+    .thankyou-page-body section p,
+    .thankyou-page-body section h1 {
+        width: 60vw;
+        max-width: 70vw;
+        margin: 1em auto;
     }
 }
