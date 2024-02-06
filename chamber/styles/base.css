@@ -107,6 +107,7 @@ nav ul {
 }
 
 .close-button {
+    font-family: var(--heading-font);
     background: var(--primary-color);
     color: white;
     border: none;
@@ -543,6 +544,7 @@ footer {
     text-align: center;
 }
 
+
 .footer-captions {
     font-family: var(--heading-font);
     color: var(--primary-color);
@@ -937,6 +939,7 @@ iframe {
 }
 
 .form-container input[type="radio"] {
+    font-family: var(--heading-font);
     width: 2rem;
     height: 2rem;
 }
@@ -968,6 +971,7 @@ iframe {
 
 .form-container form input:not([type="radio"]),
 .form-container form textarea {
+    font-family: var(--heading-font);
     display: block;
     color: #555;
     font-size: max(1.8rem, 1em);
@@ -1027,7 +1031,9 @@ iframe {
 
 .thankyou-page-body section p {
     font-size: 2rem;
-    background-color: #fff;
+    background: var(--glass-effect-bg);
+    backdrop-filter: var(--blur-effect);
+    box-shadow: var(--box-shadow-all-4sides);
     padding: 1em 0.75em;
 }
 
