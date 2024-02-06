@@ -27,6 +27,17 @@ class Switch {
             this.toggleStatus();
         }
     }
+
+    // Switch state of a switch
+    toggleStatus() {
+        const currentState =
+            this.switchBtn.getAttribute('aria-checked') === 'true';
+        const switchDot = this.switchBtn.querySelector('.switch span');
+        const newState = String(!currentState);
+
+        this.switchBtn.setAttribute('aria-checked', newState);
+        switchDot.classList.toggle('moveRight');
+    }
 }
 
 function toggleNav() {
@@ -102,7 +113,7 @@ function displayDate() {
 };
 displayDate();
 
-//////////// DISCOVER HTML -- DATE & TIME 
+//DISCOVER HTML -- DATE & TIME 
 function feedbackMessage() {
     const messageBox = document.querySelector('.message-box');
 
