@@ -1,5 +1,6 @@
-const weatherBox = document.querySelector('.weather-box');
-const weatherIcon = document.querySelector('.weather-icon');
+const weatherBox = document.querySelector('#weather-box');
+const weatherIcon = document.querySelector('#weather-icon');
+const captionDesc = document.querySelector('#weatherDesc');
 
 
 const lat = 14.59832;
@@ -28,8 +29,9 @@ function displayResults(data) {
     let desc = data.weather[0].description;
     weatherIcon.setAttribute('src', iconsrc);
     weatherIcon.setAttribute('alt', 'weather-icon');
-    const msgForcast = `${data.main.temp}&deg;F - ${desc}`;
+    const msgForcast = `${data.main.temp}&deg;F`;
     weatherBox.innerHTML = msgForcast;
+    captionDesc.textContent = desc;
 }
 
 apiFetch();
