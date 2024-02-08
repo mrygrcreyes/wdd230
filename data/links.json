@@ -1,7 +1,7 @@
 {
     "weeks": [
         {
-            "weeks": "Week 01",
+            "week": "Week 01",
             "links": [
                 {
                     "url": "week01/holygrail.html",
@@ -18,7 +18,7 @@
             ]
         },
         {
-            "weeks": "Week 02",
+            "week": "Week 02",
             "links": [
                 {
                     "url": "week02/design.html",
@@ -31,6 +31,69 @@
                 {
                     "url": "week02/bom.html",
                     "title": "B.O.M - DOM Manipulation"
+                }
+            ]
+        },
+        {
+            "week": "Week 03",
+            "links": [
+                {
+                    "url": "week03/images/landscape.webp",
+                    "title": "WebP"
+                },
+                {
+                    "url": "week03/lazyload.html",
+                    "title": "Lazy Load"
+                },
+                {
+                    "url": "week03/responsive-images.html",
+                    "title": "Responsive Images"
+                },
+                {
+                    "url": "week03/bom.html",
+                    "title": "Web Storage API"
+                }
+            ]
+        },
+        {
+            "week": "Week 04",
+            "links": [
+                {
+                    "url": "https://codepen.io/mrygrcreyes/pen/GReQRyB",
+                    "title": "CSS Pseudo-classes"
+                },
+                {
+                    "url": "week04/images/CSS Combinators.webp",
+                    "title": "CSS Combinators"
+                },
+                {
+                    "url": "week04/tablebuild.html",
+                    "title": "HTML Tables"
+                },
+                {
+                    "url": "week04/index.html",
+                    "title": "Form"
+                }
+            ]
+        },
+        {
+            "week": "Week 05",
+            "links": [
+                {
+                    "url": "https://codepen.io/mrygrcreyes/pen/BabPgmz",
+                    "title": "Pseudo-elements"
+                },
+                {
+                    "url": "week05/new-ward-members.json",
+                    "title": "Json"
+                },
+                {
+                    "url": "week05/prophets.html",
+                    "title": "Latter-Day Prophets"
+                },
+                {
+                    "url": "week05/weather.html",
+                    "title": "Weather API"
                 }
             ]
         }

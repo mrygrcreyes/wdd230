@@ -1,15 +1,14 @@
 'use strict';
 
-const linkBox = document.getElementById('link-box');
+const linkBox = document.getElementById('card-1');
 
-const baseURL = 'https://mrygrcreyes.github.io/wdd230/';
-const linksURL = 'https://mrygrcreyes.github.io/wdd230/data/links.json';
+const baseUrl = 'https://mrygrcreyes.github.io/wdd230';
+const linksUrl = 'https://mrygrcreyes.github.io/wdd230/data/links.json';
 
 const getLinks = async function () {
-    const response = await fetch(linksURL);
+    const response = await fetch(linksUrl);
     const data = await response.json();
-    // console.log(data);
-    displayLinks(data);
+    displayLinks(data.weeks);
 }
 
 const displayLinks = function (data) {
@@ -31,7 +30,4 @@ const displayLinks = function (data) {
     }
 };
 
-
-
 getLinks();
-
