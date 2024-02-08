@@ -22,7 +22,6 @@ const displayLinks = function (data) {
             linkEl.title = link.title;
             linkEl.innerHTML = link.title;
             linkEl.target = '_blank';
-            linkEl.content = link.content;
 
             listEl.appendChild(linkEl)
         });
