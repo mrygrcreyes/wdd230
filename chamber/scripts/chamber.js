@@ -118,7 +118,7 @@ function feedbackMessage() {
     const messageBox = document.querySelector('.message-box');
 
     const welcomeMsg = `<p>Welcome! Let us know if you have any questions.</p>`;
-    const welcomeBack = `<p>Back so soon! Awesome!</p>`
+    const welcomeBack = `<p>Back so soon! Awesome!</p>`;
     const sinceLastVist = `<p>You last visited [n] days ago</p>`;
 
     // number of milliseconds in a day
@@ -146,6 +146,7 @@ function feedbackMessage() {
     localStorage.setItem('visitTimeStamp', JSON.stringify(currentTime))
 }
 feedbackMessage();
+
 
 // /////////////////////////////////////////////////////////
 // // function for rendering the days in the calendar

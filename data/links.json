@@ -1,0 +1,38 @@
+{
+    "weeks": [
+        {
+            "weeks": "Week 01",
+            "links": [
+                {
+                    "url": "week01/holygrail.html",
+                    "title": "Page Layout"
+                },
+                {
+                    "url": "https://codepen.io/mrygrcreyes/pen/NWJbYYo",
+                    "title": "Applied JavaScript"
+                },
+                {
+                    "url": "week01/media-query.html",
+                    "title": "Media Query"
+                }
+            ]
+        },
+        {
+            "weeks": "Week 02",
+            "links": [
+                {
+                    "url": "week02/design.html",
+                    "title": "Design Principle"
+                },
+                {
+                    "url": "https://codepen.io/mrygrcreyes/pen/poYPbNL",
+                    "title": "Responsive Navigation"
+                },
+                {
+                    "url": "week02/bom.html",
+                    "title": "B.O.M - DOM Manipulation"
+                }
+            ]
+        }
+    ]
+}
