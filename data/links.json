@@ -5,11 +5,11 @@
             "links": [
                 {
                     "url": "week01/holygrail.html",
-                    "title": "Page Layout"
+                    "title": "Page Layout | "
                 },
                 {
                     "url": "https://codepen.io/mrygrcreyes/pen/NWJbYYo",
-                    "title": "Applied JavaScript"
+                    "title": "Applied JavaScript | "
                 },
                 {
                     "url": "week01/media-query.html",
@@ -22,11 +22,11 @@
             "links": [
                 {
                     "url": "week02/design.html",
-                    "title": "Design Principle"
+                    "title": "Design Principle | "
                 },
                 {
                     "url": "https://codepen.io/mrygrcreyes/pen/poYPbNL",
-                    "title": "Responsive Navigation"
+                    "title": "Responsive Navigation | "
                 },
                 {
                     "url": "week02/bom.html",
@@ -39,15 +39,15 @@
             "links": [
                 {
                     "url": "week03/images/landscape.webp",
-                    "title": "WebP"
+                    "title": "WebP | "
                 },
                 {
                     "url": "week03/lazyload.html",
-                    "title": "Lazy Load"
+                    "title": "Lazy Load | "
                 },
                 {
                     "url": "week03/responsive-images.html",
-                    "title": "Responsive Images"
+                    "title": "Responsive Images | "
                 },
                 {
                     "url": "week03/bom.html",
@@ -60,15 +60,15 @@
             "links": [
                 {
                     "url": "https://codepen.io/mrygrcreyes/pen/GReQRyB",
-                    "title": "CSS Pseudo-classes"
+                    "title": "CSS Pseudo-classes | "
                 },
                 {
                     "url": "week04/images/CSS Combinators.webp",
-                    "title": "CSS Combinators"
+                    "title": "CSS Combinators | "
                 },
                 {
                     "url": "week04/tablebuild.html",
-                    "title": "HTML Tables"
+                    "title": "HTML Tables | "
                 },
                 {
                     "url": "week04/index.html",
@@ -81,19 +81,19 @@
             "links": [
                 {
                     "url": "https://codepen.io/mrygrcreyes/pen/BabPgmz",
-                    "title": "Pseudo-elements"
+                    "title": "Pseudo-elements | "
                 },
                 {
                     "url": "week05/new-ward-members.json",
-                    "title": "Json"
+                    "title": "Json | "
                 },
                 {
                     "url": "week05/prophets.html",
-                    "title": "Latter-Day Prophets"
+                    "title": "Latter-Day Prophets | "
                 },
                 {
                     "url": "week05/weather.html",
-                    "title": "Weather API"
+                    "title": "Weather API | "
                 }
             ]
         }
