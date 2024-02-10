@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Mary Grace Reyes">
+    <meta name="description" content="The directory page lists the members of the chamber">
+    <!-- edit the social media meta -->
+    <meta property="og:title" content="Mary Grace Reyes - Rizal Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image"
+        content="https://www.pexels.com/photo/person-standing-infront-of-a-display-window-3056059/">
+    <meta property="og:url" content="https://mrygrcreyes.github.io/wdd230/">
+    <title>Rizal Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/base.css">
+    <link rel="stylesheet" type="text/css" href="styles/larger.css">
+    <link rel="icon" href="favicon-chamber.ico">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
+</head>
+
+<body class="homepage-body">
+    <div id="banner" class="banner" role="alert">
+        <p> Join us on Friday at 7 a.m the meet and greet of Rizal Chamber of Commerce</p>
+        <button id="closeBanner" class="close-button" aria-label="Close">×</button>
+    </div>
+
+    <header>
+        <!-- mobile view -->
+        <button class="menu-btn" aria-label="Toggle menu button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="logo-box">
+            <a href="index.html"><img src="images/chamber-logo.webp" alt="Rizal Chamber of Commerce logo" class="logo">
+            </a>
+        </div>
+
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li><a href="index.html" class="nav-links"><i class="fa-solid fa-house"></i> HOME</a></li>
+                <li><a href="discover.html" class="nav-links"><i class="fa-solid fa-magnifying-glass"></i>
+                        DISCOVER</a></li>
+                <li><a href="directory.html" class="nav-links"><i class="fa-solid fa-folder"></i> DIRECTORY</a></li>
+                <li><a href="join.html" class="nav-links"><i class="fa-solid fa-user"></i> JOIN</a></li>
+            </ul>
+            <!-- dark mode -->
+            <div aria-label="Light and dark mode toggle switch" role="switch" aria-checked="false" tabindex="0">
+                <span class="switch">
+                    <span></span>
+                </span>
+                <span class="off" aria-hidden="true">
+                    <i class="fa-solid fa-sun"></i>
+                </span>
+
+                <span class="on" aria-hidden="true">
+                    <i class="fa-solid fa-moon"></i>
+                </span>
+            </div>
+        </nav>
+
+        <div class="header-box">
+            <div class="header-intro">
+                <div>
+                    <h1>Welcome to Rizal Chamber of Commerce</h1>
+                    <span class="motto-text">Growing and Advancing the interests of local businesses</span>
+                </div>
+
+                <div>
+                    <p>The non-profit Rizal Chamber of Commerce works to support the business community of Rizal.
+                        Join us on our mission to strengthen communities, promote businesses, and build a better
+                        tomorrow.
+                    </p>
+                </div>
+
+                <div class="cta-box">
+                    <a href="join.html" role="button" class="btn-join">JOIN US</a>
+                    <a href="discover.html" role="button" class="btn-explore">DISCOVER</a>
+                </div>
+            </div>
+
+            <!-- <div class="socials-box">
+                    <a href="" target="_blank"
+                        class="social-links" aria-label="Go to Rizal Chamber Facebook page">
+                        add icon here 
+                    </a>
+                    add other social for this page 
+                </div>-->
+
+            <div class="weather-box">
+                <h2>WEATHER</h2>
+                <div class="weather-info details">
+                    <p>Manila, Philippines</p>
+                    <p>Rizal Province - 1920</p>
+                    <p><span id="current-temp"></span> <!-- add weather icon here --><span id="description"></span></p>
+                    <p><span id="windspeed"></span>Mph, Wind Speed</p>
+                    <p><span id="wind-direction"></span> Wind direction</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+            <section class="intro-section">
+                <h1>Discover Our Diverse Member Directory</h1>
+                <p>Welcome to our vibrant Member Directory, a showcase of the businesses that power our community. Our
+                    directory is home to a diverse array of companies, each contributing to the local economy and fostering
+                    growth. Whether you're seeking a trusted service provider, networking opportunities, or simply want to
+                    explore the incredible range of businesses in our region, you've come to the right place.</p>
+            </section>
+            
+            <section class="views-button-section">
+                <button role="button" id="grid-view">⏹️ Grid view</button>
+                <button role="button" id="list-view">📄 List view</button>
+            </section>
+            
+            <section class="member-card-section">
+            
+            </section>
+    </main>
+    <footer>
+        <div class="contact-box">
+            <p class="footer-captions">Contact Us</p>
+            <address>
+                <a href="marlane@buenamano.com.ph">📧 marlane@buenamano.com.ph</a>
+                <!-- <br> -->
+                <a href="tel:+660-6131">📞 660-6131</a>
+                <p>📍 309, Fairtrade Commercial Center,</p>
+                <p>Ortigas Ave. Extension Cainta</p>
+                <p>Philippines</p>
+            </address>
+        </div>
+        <div class="quick-link-box">
+            <p class="footer-captions">Quick Links</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join Us</a></li>
+            </ul>
+        </div>
+        <div class="footer-socials">
+            <p class="footer-captions">Stay Connected</p>
+            <ul>
+                <li><a href="#" target="_blank" class="footer-social-links" aria-label="Rizal Chamber LinkedIn account">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a></li>
+                <li><a href="#" target="_blank" class="footer-social-links" aria-label="Rizal Chamber Facebook page">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a></li>
+            </ul>
+        </div>
+        <div class="copyright-box">
+            <p>&copy; <span id="year"></span> Mary Grace Reyes - WDD230 Web Frontend Development - Philippines</p>
+            <p>Last modified: <span class="last-modify"></span></p>
+            <p id="analytics"></p>
+        </div>
+    </footer>
+    <script src="scripts/chamber.js"></script>
+</body>
+
+</html>

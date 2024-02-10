@@ -147,9 +147,9 @@
         text-align: left;
     }
 
-    
+
     /* ---------------------- DISCOVER PAGE SECTION --------------- */
-    
+
     .discover-page-body header,
     .join-page-body header,
     .directory-page-body header {
@@ -243,5 +243,27 @@
         width: 60vw;
         max-width: 70vw;
         margin: 1em auto;
+    }
+
+
+    /* ---------------------- DIRECTORY PAGE SECTION --------------- */
+
+
+    .member-card {
+        width: 100%;
+    }
+
+    .list .member-card {
+        gap: 3rem;
+    }
+
+    .list .member-card .member-info-box {
+        gap: 2rem;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
     }
 }

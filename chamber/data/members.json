@@ -1,0 +1,20 @@
+{
+    "data": [
+        {
+            "name": "aaaa",
+            "address": "123 Main Street, City, Country",
+            "phone": "+27 (11) 123-4567",
+            "website": "https://www.acmecorp.co.za",
+            "image": "images/acme-corporation.webp",
+            "membershipLevel": "images/gold.png"
+        },
+        {
+            "name": "Widgets Ltd.",
+            "address": "456 Elm Street, Town, Country",
+            "phone": "+27 (21) 234-5678",
+            "website": "https://www.widgets.co.za",
+            "image": "images/widgetsltd.webp",
+            "membershipLevel": "images/gold.png"
+        }
+    ]
+}
