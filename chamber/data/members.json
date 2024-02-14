@@ -1,20 +1,68 @@
 {
     "data": [
         {
-            "name": "aaaa",
-            "address": "123 Main Street, City, Country",
-            "phone": "+27 (11) 123-4567",
-            "website": "https://www.acmecorp.co.za",
-            "image": "images/acme-corporation.webp",
-            "membershipLevel": "images/gold.png"
+            "name": "PANASONIC MANUFACTURING PHILIPPINES CORPORATION",
+            "address": "Ortigas Avenue, Extension, Taytay, Rizal, Philippines",
+            "phone": "(+63) 2 8635-2260",
+            "website": "https://www.panasonic.com/ph/",
+            "image": "images/panasonic.web",
+            "membershipLevel": "images/gold.webp"
         },
         {
-            "name": "Widgets Ltd.",
-            "address": "456 Elm Street, Town, Country",
-            "phone": "+27 (21) 234-5678",
-            "website": "https://www.widgets.co.za",
-            "image": "images/widgetsltd.webp",
-            "membershipLevel": "images/gold.png"
+            "name": "PHILIPPINE SKYBIRD INDUSTRIAL CORPORATION",
+            "address": "Taytay, Rizal, Philippines",
+            "phone": "(+63) 8693-6560",
+            "website": "http://skybirdph.com/",
+            "image": "images/skybird.webp",
+            "membershipLevel": "images/silver.webp"
+        },
+        {
+            "name": "CROWNMIX CORPORATION",
+            "address": "Sitio Ilog Pugad, Hi-Way 2000 Taytay Rizal, Philippines",
+            "phone": "(+63) 9162474091",
+            "website": "https://crownmixcorp.com/",
+            "image": "images/crownmix.webp",
+            "membershipLevel": "images/np.webp"
+        },
+        {
+            "name": "GL PACKAGING PHILIPPINES, INC.",
+            "address": "PSPC Refinery Compound Brgy. Malaya, Pililla, Rizal 1910, Philippines",
+            "phone": "(+63) 789-0123",
+            "website": "https://www.glpackaging.ph/",
+            "image": "images/GL Packaging.webp",
+            "membershipLevel": "images/gold.webp"
+        },
+        {
+            "name": "GRANDSPAN DEVELOPMENT CORPORATION",
+            "address": "Brgy. Tagpos, Binangonan Rizal 1940, Philippines",
+            "phone": "(632) 8651-1451",
+            "website": "https://www.grandspan.ph/home/",
+            "image": "images/grandspan.webp",
+            "membershipLevel": "images/bronze.webp"
+        },
+        {
+            "name": "AMSTEEL STRUCTURES, INC.",
+            "address": "88-98 Velesquez St.Taytay, Rizal, Philippines",
+            "phone": "+632 8451 0191",
+            "website": "http://amsteelstructures.com/",
+            "image": "images/AMSTEEL.webp",
+            "membershipLevel": "images/np.webp"
+        },
+        {
+            "name": "DELTA CONCRETE CORPORATION",
+            "address": "Velasquesz St. Sitio Bangiad Brgy. San Juan, Taytay Rizal, Philippines",
+            "phone": "(02)8424-0980",
+            "website": "https://deltaconcrete.com.ph/",
+            "image": "images/delta.webp",
+            "membershipLevel": "images/silver.webp"
+        },
+        {
+            "name": "KALINISAN CHEMICALS CORPORATION",
+            "address": "Bldg 1 Cainta Business Center Executive Village Cainta, Rizal, Philippines",
+            "phone": "(02) 8236-0332",
+            "website": "https://kalinisanchemicals.com/",
+            "image": "images/kalinisan.webp",
+            "membershipLevel": "images/bronze.webp"
         }
     ]
 }

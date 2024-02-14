@@ -25,7 +25,7 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
 </head>
 
-<body class="homepage-body">
+<body class="directory-page-body">
     <div id="banner" class="banner" role="alert">
         <p> Join us on Friday at 7 a.m the meet and greet of Rizal Chamber of Commerce</p>
         <button id="closeBanner" class="close-button" aria-label="Close">×</button>
@@ -64,64 +64,140 @@
                 </span>
             </div>
         </nav>
-
-        <div class="header-box">
-            <div class="header-intro">
-                <div>
-                    <h1>Welcome to Rizal Chamber of Commerce</h1>
-                    <span class="motto-text">Growing and Advancing the interests of local businesses</span>
-                </div>
-
-                <div>
-                    <p>The non-profit Rizal Chamber of Commerce works to support the business community of Rizal.
-                        Join us on our mission to strengthen communities, promote businesses, and build a better
-                        tomorrow.
-                    </p>
-                </div>
-
-                <div class="cta-box">
-                    <a href="join.html" role="button" class="btn-join">JOIN US</a>
-                    <a href="discover.html" role="button" class="btn-explore">DISCOVER</a>
-                </div>
-            </div>
-
-            <!-- <div class="socials-box">
-                    <a href="" target="_blank"
-                        class="social-links" aria-label="Go to Rizal Chamber Facebook page">
-                        add icon here 
-                    </a>
-                    add other social for this page 
-                </div>-->
-
-            <div class="weather-box">
-                <h2>WEATHER</h2>
-                <div class="weather-info details">
-                    <p>Manila, Philippines</p>
-                    <p>Rizal Province - 1920</p>
-                    <p><span id="current-temp"></span> <!-- add weather icon here --><span id="description"></span></p>
-                    <p><span id="windspeed"></span>Mph, Wind Speed</p>
-                    <p><span id="wind-direction"></span> Wind direction</p>
-                </div>
-            </div>
-        </div>
     </header>
     <main>
-            <section class="intro-section">
-                <h1>Discover Our Diverse Member Directory</h1>
-                <p>Welcome to our vibrant Member Directory, a showcase of the businesses that power our community. Our
-                    directory is home to a diverse array of companies, each contributing to the local economy and fostering
-                    growth. Whether you're seeking a trusted service provider, networking opportunities, or simply want to
-                    explore the incredible range of businesses in our region, you've come to the right place.</p>
-            </section>
-            
-            <section class="views-button-section">
-                <button role="button" id="grid-view">⏹️ Grid view</button>
-                <button role="button" id="list-view">📄 List view</button>
-            </section>
-            
-            <section class="member-card-section">
-            
-            </section>
+        <section class="intro-section">
+            <h1>Discover Our Diverse Member Directory</h1>
+            <p>Welcome to our evolving Member Directory, which highlights the businesses that power this community. Our directory is home to a varied range of businesses, each of which contributes to the local economy and promotes growth.</p>
+        </section>
+
+        <div class="views-button-section">
+            <button id="grid-view">⏹️ Grid view</button>
+            <button id="list-view">📄 List view</button>
+        </div>
+
+        <div class="member-card-section">
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/panasonic.webp" alt="PANASONIC MANUFACTURING logo" width="1000" height="623"
+                            loading="lazy">
+                    </div>
+                    <figcaption>PANASONIC MANUFACTURING PHILIPPINES CORPORATION</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>Ortigas Avenue, Extension, Taytay, Rizal, Philippines</p>
+                    <p>(+63) 2 8635-2260</p>
+                    <a href="https://www.panasonic.com/ph/" target="_blank">https://www.panasonic.com/ph/</a>
+                    <img src="images/gold.webp" alt="" width="70" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/skybird.webp" alt="PHILIPPINE SKYBIRD INDUSTRIAL logo" width="1000"
+                            height="623" loading="lazy">
+                    </div>
+                    <figcaption>PHILIPPINE SKYBIRD INDUSTRIAL CORPORATION</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>Taytay, Rizal, Philippines</p>
+                    <p>(+63) 8693-6560</p>
+                    <a href="http://skybirdph.com/" target="_blank">http://skybirdph.com/</a>
+                    <img src="images/silver.webp" alt="" width="70" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/crownmix.webp" alt="CROWNMIX CORPORATION logo" width="1000" height="623"
+                            loading="lazy">
+                    </div>
+                    <figcaption>CROWNMIX CORPORATION</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>Sitio Ilog Pugad, Hi-Way 2000 Taytay Rizal, Philippines</p>
+                    <p>(+63) 9162474091</p>
+                    <a href="https://crownmixcorp.com/" target="_blank">https://crownmixcorp.com/</a>
+                    <img src="images/np.webp" alt="" width="50" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/GLPackaging.webp" alt="GL PACKAGING PHILIPPINES, INC. logo" width="1000" height="623" loading="lazy">
+                    </div>
+                    <figcaption>GL PACKAGING PHILIPPINES, INC.</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>PSPC Refinery Compound Brgy. Malaya, Pililla, Rizal 1910, Philippines</p>
+                    <p>(+63) 789-0123</p>
+                    <a href="https://www.glpackaging.ph/" target="_blank">https://www.glpackaging.ph/</a>
+                    <img src="images/gold.webp" alt="" width="70" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/grandspan.webp" alt="GRANDSPAN DEVELOPMENT logo" width="1000" height="623"
+                            loading="lazy">
+                    </div>
+                    <figcaption>GRANDSPAN DEVELOPMENT CORPORATION</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>Brgy. Tagpos, Binangonan Rizal 1940, Philippines</p>
+                    <p>(632) 8651-1451</p>
+                    <a href="https://www.grandspan.ph/home/" target="_blank">https://www.grandspan.ph/home/</a>
+                    <img src="images/bronze.webp" alt="" width="70" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/AMSTEEL.webp" alt="AMSTEEL STRUCTURES logo" width="1000" height="623"
+                            loading="lazy">
+                    </div>
+                    <figcaption>AMSTEEL STRUCTURES, INC.</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>88-98 Velesquez St.Taytay, Rizal, Philippines</p>
+                    <p>+632 8451 0191</p>
+                    <a href="http://amsteelstructures.com/" target="_blank">http://amsteelstructures.com/</a>
+                    <img src="images/np.webp" alt="" width="50" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/delta.webp" alt="DELTA CONCRETE CORPORATION logo" width="1000" height="623"
+                            loading="lazy">
+                    </div>
+                    <figcaption>DELTA CONCRETE CORPORATION</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>Velasquesz St. Sitio Bangiad Brgy. San Juan, Taytay Rizal, Philippines</p>
+                    <p>(02)8424-0980</p>
+                    <a href="https://deltaconcrete.com.ph/" target="_blank">https://deltaconcrete.com.ph/</a>
+                    <img src="images/silver.webp" alt="" width="70" height="50">
+                </div>
+            </div>
+            <div class="member-card">
+                <figure>
+                    <div>
+                        <img src="images/kalinisan.webp" alt="KALINISAN CHEMICALS CORPORATION logo" width="1000"
+                            height="623" loading="lazy">
+                    </div>
+                    <figcaption>KALINISAN CHEMICALS CORPORATION</figcaption>
+                </figure>
+                <div class="member-info-box">
+                    <p>Bldg 1 Cainta Business Center Executive Village Cainta, Rizal, Philippines</p>
+                    <p>(02) 8236-0332</p>
+                    <a href="https://kalinisanchemicals.com/" target="_blank">https://kalinisanchemicals.com/</a>
+                    <img src="images/bronze.webp" alt="" width="70" height="50">
+                </div>
+            </div>
+
+        </div>
     </main>
     <footer>
         <div class="contact-box">

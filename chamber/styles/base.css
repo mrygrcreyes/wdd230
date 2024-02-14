@@ -1091,7 +1091,7 @@ iframe {
 }
 
 .views-button-section #grid-view {
-    background-color: var(--optional-color);
+    background-color: var(--secondary-color);
 }
 
 .views-button-section #list-view {
@@ -1100,7 +1100,7 @@ iframe {
 }
 
 .member-card-section {
-    background-color: #eef0f4;
+    background-color: var(--primary-color);
     margin-block: 1em;
     padding-block: 1.5em;
     padding-inline: 1em;
@@ -1108,7 +1108,7 @@ iframe {
 
 .member-card {
     width: 80%;
-    background-color: #fff;
+    background-color:var(--tertiary-color);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -1165,7 +1165,7 @@ iframe {
 }
 
 .list .member-card:nth-child(even) {
-    background-color: var(--tertiary-color);
+    background-color: var(--default-color);
 }
 
 .list .member-card {
