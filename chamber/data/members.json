@@ -6,7 +6,8 @@
             "phone": "(+63) 2 8635-2260",
             "website": "https://www.panasonic.com/ph/",
             "image": "images/panasonic.web",
-            "membershipLevel": "images/gold.webp"
+            "membershipLevel": "images/gold.webp",
+            "membership": "Gold"
         },
         {
             "name": "PHILIPPINE SKYBIRD INDUSTRIAL CORPORATION",
@@ -14,7 +15,9 @@
             "phone": "(+63) 8693-6560",
             "website": "http://skybirdph.com/",
             "image": "images/skybird.webp",
-            "membershipLevel": "images/silver.webp"
+            "membershipLevel": "images/silver.webp",
+            "membership": "Silver"
+            
         },
         {
             "name": "CROWNMIX CORPORATION",
@@ -22,15 +25,17 @@
             "phone": "(+63) 9162474091",
             "website": "https://crownmixcorp.com/",
             "image": "images/crownmix.webp",
-            "membershipLevel": "images/np.webp"
+            "membershipLevel": "images/np.webp",
+            "membership": "NP"
         },
         {
             "name": "GL PACKAGING PHILIPPINES, INC.",
-            "address": "PSPC Refinery Compound Brgy. Malaya, Pililla, Rizal 1910, Philippines",
+            "address": "PSPC Refinery Compound Brgy. Malaya, Pililla, Philippines",
             "phone": "(+63) 789-0123",
             "website": "https://www.glpackaging.ph/",
             "image": "images/GL Packaging.webp",
-            "membershipLevel": "images/gold.webp"
+            "membershipLevel": "images/gold.webp",
+            "membership": "Gold"
         },
         {
             "name": "GRANDSPAN DEVELOPMENT CORPORATION",
@@ -38,7 +43,8 @@
             "phone": "(632) 8651-1451",
             "website": "https://www.grandspan.ph/home/",
             "image": "images/grandspan.webp",
-            "membershipLevel": "images/bronze.webp"
+            "membershipLevel": "images/bronze.webp",
+            "membership": "Bronze"
         },
         {
             "name": "AMSTEEL STRUCTURES, INC.",
@@ -46,7 +52,8 @@
             "phone": "+632 8451 0191",
             "website": "http://amsteelstructures.com/",
             "image": "images/AMSTEEL.webp",
-            "membershipLevel": "images/np.webp"
+            "membershipLevel": "images/np.webp",
+            "membership": "NP"
         },
         {
             "name": "DELTA CONCRETE CORPORATION",
@@ -54,7 +61,8 @@
             "phone": "(02)8424-0980",
             "website": "https://deltaconcrete.com.ph/",
             "image": "images/delta.webp",
-            "membershipLevel": "images/silver.webp"
+            "membershipLevel": "images/silver.webp",
+            "membership": "Silver"
         },
         {
             "name": "KALINISAN CHEMICALS CORPORATION",
@@ -62,7 +70,8 @@
             "phone": "(02) 8236-0332",
             "website": "https://kalinisanchemicals.com/",
             "image": "images/kalinisan.webp",
-            "membershipLevel": "images/bronze.webp"
+            "membershipLevel": "images/bronze.webp",
+            "membership": "Bronze"
         }
     ]
 }

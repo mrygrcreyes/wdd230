@@ -10,34 +10,115 @@ let currentMonth = date.getMonth();
 // getting the current year
 let currentYear = date.getFullYear()
 
+//// Dark Mode
+const modeButton = document.querySelector("#mode");
+const main = document.querySelector("main");
 
-class Switch {
-    constructor(switchMode) {
-        this.switchBtn = switchMode;
-        this.switchBtn.addEventListener('click', () => this.toggleStatus());
-        this.switchBtn.addEventListener('keydown', (event) =>
-            this.handleKeydown(event)
-        );
+modeButton.addEventListener("click", () => {
+    if (modeButton.textContent.includes("🕶️")) {
+        main.style.background = "#000";
+        main.style.color = "#fff";
+        modeButton.textContent = "🔆";
+    } else {
+        main.style.background = "#eee";
+        main.style.color = "#000";
+        modeButton.textContent = "🕶️";
     }
+});
 
-    handleKeydown(event) {
-        // Only do something when space or return is pressed
-        if (event.key === 'Enter' || event.key === ' ') {
-            event.preventDefault();
-            this.toggleStatus();
+
+//// Current Weather and 3 Day Forecast
+
+const weather = document.querySelector('#weather-boxx');
+
+
+const url = 'https://api.openweathermap.org/data/2.5/weather?lat=14.59832&lon=120.98659&appid=0b6396ec51390424c164a6782f787117&units=imperial';
+const forecast_url = 'https://api.openweathermap.org/data/2.5/forecast?lat=14.59832&lon=120.98659&cnt=3&appid=0b6396ec51390424c164a6782f787117&units=imperial';
+
+async function apiFetch() {
+    try {
+        const response = await fetch(url);
+        const forecast_response = await fetch(forecast_url);
+        if (response.ok && forecast_response.ok) {
+            const data = await response.json();
+            const forecast = await forecast_response.json();
+            displayResults(data, forecast);
+        } else {
+            throw Error(await response.text());
         }
     }
-
-    // Switch state of a switch
-    toggleStatus() {
-        const currentState =
-            this.switchBtn.getAttribute('aria-checked') === 'true';
-        const switchDot = this.switchBtn.querySelector('.switch span');
-        const newState = String(!currentState);
-
-        this.switchBtn.setAttribute('aria-checked', newState);
-        switchDot.classList.toggle('moveRight');
+    catch (error) {
+        console.log(error);
     }
+}
+
+apiFetch();
+
+function displayResults(data, forecast) {
+    //Create Table with current weather
+    let tableCurr = document.createElement('table');
+    let tableHeadCurr = document.createElement('thead');
+    let tableBodyCurr = document.createElement('tbody');
+    let tableRowCurr = document.createElement('tr');
+    let tableHeadDataCurr = document.createElement('th');
+    tableHeadDataCurr.textContent = 'Current Weather';
+    tableHeadDataCurr.setAttribute('colspan', '3');
+    tableHeadCurr.appendChild(tableHeadDataCurr);
+    tableCurr.appendChild(tableHeadCurr);
+
+    //Create 3 columns for current weather
+    var tableDataCurr = document.createElement('td');
+    var icon = document.createElement('img');
+    var iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+    var desc = data.weather[0].description;
+    icon.setAttribute('src', iconsrc);
+    icon.setAttribute('alt', desc);
+    tableDataCurr.appendChild(icon);
+    tableRowCurr.appendChild(tableDataCurr);
+
+    tableDataCurr = document.createElement('td');
+    tableDataCurr.innerHTML = `${data.main.temp}&deg;F`;
+    tableRowCurr.appendChild(tableDataCurr);
+
+    tableDataCurr = document.createElement('td');
+    tableDataCurr.innerHTML = `${data.weather[0].description}`;
+    tableRowCurr.appendChild(tableDataCurr);
+
+
+    tableBodyCurr.appendChild(tableRowCurr);
+    tableCurr.appendChild(tableBodyCurr);
+
+
+
+    //Create Table with 3 day forecast
+    let table = document.createElement('table');
+    let tableHead = document.createElement('thead');
+    let tableBody = document.createElement('tbody');
+    let tableRow = document.createElement('tr');
+    let tableHeadData = document.createElement('th');
+    tableHeadData.textContent = '3 Day Forecast';
+    tableHeadData.setAttribute('colspan', '3');
+    tableHead.appendChild(tableHeadData);
+    table.appendChild(tableHead);
+
+    for (let i = 0; i < 3; i++) {
+        let tableData = document.createElement('td');
+        let icon = document.createElement('img');
+        let iconsrc = `https://openweathermap.org/img/w/${forecast.list[i].weather[0].icon}.png`;
+        let desc = forecast.list[i].weather[0].description;
+        icon.setAttribute('src', iconsrc);
+        icon.setAttribute('alt', desc);
+        tableData.appendChild(icon);
+        tableData.innerHTML += `<br>${forecast.list[i].main.temp}&deg;F`;
+        tableRow.appendChild(tableData);
+    }
+    tableBody.appendChild(tableRow);
+    table.appendChild(tableBody);
+    table.setAttribute('id', 'forecast');
+    tableCurr.setAttribute('id', 'current');
+    weather.appendChild(tableCurr);
+    weather.appendChild(table);
+
 }
 
 // // Initialize switches
@@ -148,8 +229,8 @@ function activePage() {
 }
 activePage();
 
-//////////////////////////////////////////////////////////
-// Meetup banner
+/////// Meetup banner
+
 function meetupBanner() {
     const date = new Date();
 
@@ -341,42 +422,71 @@ function displayCalender() {
 displayCalender();
 
 
-//weather
+//Spotlight
 
-// const weatherBox = document.querySelector('.weather-box');
-// const weatherIcon = document.querySelector('.weather-icon');
+const membersHTML = document.querySelectorAll('.member');
+const memberDataURL = "data/members.json";
 
-// const lat = -25.74804;
-// const long = 28.23708;
-// const apiKey = 'f4619f75c2d45cc1bfe1a55992e82aaa';
+async function apiFetch() {
+    try {
+        const response = await fetch(memberDataURL);
+        if (response.ok) {
+            const memberData = await response.json();
+            displayResultsMembers(memberData);
+        }
+        else {
+            throw Error(await response.text());
+        }
+    }
+    catch (error) {
+        console.log(error);
+    }
+}
 
-// const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=imperial`;
+apiFetch();
 
-// const apiFetch = async function () {
-//     try {
-//         const response = await fetch(url);
-//         if (response.ok) {
-//             const data = await response.json();
-//             // console.log(data);
-//             displayResults(data)
-//         } else {
-//             throw Error(await response.text());
-//         }
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
+// Choose 4 random members to display
 
-// function displayResults(data) {
-//     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-//     let desc = data.weather[0].description;
-//     weatherIcon.setAttribute('src', iconsrc);
-//     weatherIcon.setAttribute('alt', 'weather-icon');
-//     const msgForcast = `${data.main.temp}&deg;F - ${desc}`;
-//     weatherBox.innerHTML = msgForcast;
-// }
+function displayResultsMembers(data) {
+    let indexChosen = [];
+    let randomMembers = [];
+    let randomMember;
+    for (let i = 0; i < 4; i++) {
+        randomMember = data.members[Math.floor(Math.random() * data.members.length)];
+        if ((randomMember.membership == "Gold" || randomMember.membership == "Silver") && !indexChosen.includes(randomMember)) {
+            randomMembers.push(randomMember);
+            indexChosen.push(randomMember);
+        }
+        else {
+            i--;
+        }
+    }
+    for (let i = 0; i < membersHTML.length; i++) {
+        const member = membersHTML[i];
+        const randomMember = randomMembers[i];
+        const memberName = document.createElement('h2');
+        memberName.textContent = randomMember.name;
+        member.appendChild(memberName);
+        const memberContent = document.createElement('div');
+        memberContent.classList.add('member-content');
+        const memberAddress = document.createElement('p');
+        memberAddress.textContent = randomMember.address;
+        memberContent.appendChild(memberAddress);
+        member.appendChild(memberContent);
+        const memberLink = document.createElement('a');
+        memberLink.setAttribute('href', randomMember.link);
+        memberLink.textContent = 'Learn More';
+        memberContent.appendChild(memberLink);
 
-// apiFetch();
+        const memberImage = document.createElement('img');
+        imgLocation = "images/" + randomMember.image;
+        memberImage.setAttribute('src', imgLocation);
+        memberImage.setAttribute('alt', randomMember.name);
+        memberImage.setAttribute("loading", "lazy");
+        member.appendChild(memberImage);
 
 
+
+    }
+}
 
