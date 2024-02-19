@@ -78,10 +78,18 @@ nav ul {
     list-style: none;
 }
 
-:where(.nav-links, .social-links, .socials-box, .cta-box, [role="switch"]) {
+:where(.nav-links, .social-links, .socials-box, .cta-box) {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#mode {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 3rem;
 }
 
 
@@ -124,63 +132,6 @@ nav ul {
     font-family: var(--heading-font);
     text-transform: uppercase;
     text-decoration: underline double;
-}
-
-/* ------------Light - dark mode button section-------------------- */
-
-[role="switch"] .switch {
-    position: relative;
-    display: inline-block;
-    border: 2px solid black;
-    height: 2rem;
-    width: 4rem;
-    border-radius: 1.2rem;
-    margin-inline-start: 1em;
-
-}
-
-[role="switch"] .switch span {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    display: inline-block;
-    border: 2px solid black;
-    border-radius: .8rem;
-    height: 1.2rem;
-    width: 1.2rem;
-    background: var(--primary-color);
-    transition: all .3s;
-}
-
-[role="switch"] .on,
-[role="switch"] .off {
-    margin-inline-end: .3em;
-}
-
-[role="switch"] .on {
-    display: none;
-}
-
-[role="switch"] .off {
-    display: inline;
-}
-
-[role="switch"][aria-checked="true"] .on {
-    display: inline;
-
-}
-
-[role="switch"][aria-checked="true"] .off {
-    display: none;
-}
-
-.moveRight {
-    background-color: var(--secondary-color);
-    transform: translateX(2rem);
-}
-
-[role="switch"]:focus span.switch {
-    background-color: var(--secondary-color);
 }
 
 /* -----------------------------------LOGO----------------------------------- */
@@ -339,28 +290,26 @@ nav ul {
 }
 
 
-.weather-box {
-    background-color: var(--primary-color);
-    padding-inline: 1em;
+#weather-boxx {
     display: grid;
-    gap: 3rem;
-    box-shadow: 0 0 0 3px var(--primary-shade-2), var(--box-shadow-all-4sides);
+    background-color: var(--primary-color);
     border-radius: 0.5rem;
-}
-
-.weather-box h2 {
     color: var(--default-color);
-    text-decoration-color: var(--default-color);
-    align-self: center;
-    justify-self: center;
+    padding: 1rem;
 }
 
-.weather-box p {
-    color: white;
+#forecast {
+    grid-area: forecast;
+    text-align: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+    padding: 2rem;
 }
 
 
-/* -------------- NEWS-EVENTS-WEATHER-SECTION --------------- */
+
+/* -------------- NEWS-EVENTS-WEATHER-SPOTLIGHT SECTION --------------- */
 .figure-box {
     width: 80%;
     border: .5rem solid;
@@ -497,14 +446,99 @@ nav ul {
     box-shadow: 0 0 .5rem .3rem var(--default-color);
 }
 
+/* .spotlight {
+    padding: 1em 2em;
+    text-align: center;
+    background-color: var(--primary-color);
+    background-color: var(--primary-color);
+    padding-inline: 1em;
+    display: grid;
+    gap: 3rem;
+    box-shadow: 0 0 0 3px var(--primary-shade-2), var(--box-shadow-all-4sides);
+}
+
+.spotlight h2 {
+    color: var(--default-color);
+    text-decoration-color: var(--default-color);
+    align-self: center;
+    justify-self: center;
+} */
+
+
+#members {
+    /* Grid with 1 row and 4 columns spaced out equally */
+    /* Top row will just be heading */
+    /* Bottom row will be 4 members */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr repeat(4, 1fr);
+    grid-gap: 1rem;
+    padding: 5rem;
+    text-align: center;
+    justify-items: center;
+    margin-bottom: 5rem;
+}
+
+#member-heading {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.member {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        "team-member-image"
+        "team-member-name"
+        "team-member-position";
+    grid-gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    height: 30rem;
+    align-items: center;
+    background: var(--glass-effect-bg);
+    width: 20em;
+    border-radius: 2rem;
+}
+
+.member img {
+    grid-area: team-member-image;
+    justify-self: center;
+    width: 50%;
+    height: auto;
+}
+
+.member h2 {
+    grid-area: team-member-name;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.member p {
+    grid-area: team-member-position;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-shade-2);
+}
+
+.member a {
+    color: var(--primary-shade-2);
+    margin: 2rem;
+}
+
 
 /* ---------------------PARTNERS SECTION ------------------- */
-.partners {
-    /* overflow: hidden; */
+/* .partners {
+    
     padding-block: 2em;
     background-color: #ffffff;
-    /* background-image: url(); */
-
+    
 }
 
 .partner-slide {
@@ -529,7 +563,7 @@ nav ul {
 .partner-slide img {
     width: 20%;
     height: auto;
-}
+} */
 
 
 /* ----------------------FOOTER----------------------- */
@@ -1107,7 +1141,7 @@ iframe {
 
 .member-card {
     width: 80%;
-    background-color:var(--tertiary-color);
+    background-color: var(--tertiary-color);
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -1182,32 +1216,32 @@ iframe {
     margin: 0;
 }
 
- /* ----------------DIRECTORY PAGE SECTION --------------- */
+/* ----------------DIRECTORY PAGE SECTION --------------- */
 
- .member-card {
-     height: 100%;
-     width: 80%;
-     margin: 0;
-     justify-content: center;
- }
+.member-card {
+    height: 100%;
+    width: 80%;
+    margin: 0;
+    justify-content: center;
+}
 
 
- .list .member-card {
-     text-align: left;
-     border-radius: 0;
-     box-shadow: none;
+.list .member-card {
+    text-align: left;
+    border-radius: 0;
+    box-shadow: none;
 
-     flex-direction: row;
-     align-items: center;
-     gap: 2em;
- }
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+}
 
- .list .member-card figure div {
-     display: none;
- }
+.list .member-card figure div {
+    display: none;
+}
 
- .list .member-card .member-info-box {
-     display: flex;
-     align-items: center;
-     gap: 1em;
- }
+.list .member-card .member-info-box {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}

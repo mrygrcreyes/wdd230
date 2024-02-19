@@ -78,16 +78,19 @@ function displayResultsMembers(data) {
         memberContent.appendChild(memberAddress);
         member.appendChild(memberContent);
         const memberLink = document.createElement('a');
-        memberLink.setAttribute('href', randomMember.website);
+        memberLink.setAttribute('href', randomMember.link);
         memberLink.textContent = 'Learn More';
         memberContent.appendChild(memberLink);
 
         const memberImage = document.createElement('img');
-        imgLocation = "images/" + randomMember.image;
+        imgLocation = "images/" + randomMember.logo;
         memberImage.setAttribute('src', imgLocation);
         memberImage.setAttribute('alt', randomMember.name);
         memberImage.setAttribute("loading", "lazy");
         member.appendChild(memberImage);
+
+
+
     }
 }
 
@@ -226,7 +229,7 @@ function displayChamberMembers() {
     }
 
     const getMembersData = async function () {
-        const membersUrl = '..data/members.json';
+        const membersUrl = 'data/members.json';
         const response = await fetch(membersUrl);
         const data = await response.json();
         renderMembers(data.data);

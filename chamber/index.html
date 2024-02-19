@@ -23,19 +23,18 @@
     <link rel="stylesheet" type="text/css" href="styles/base.css">
     <link rel="stylesheet" type="text/css" href="styles/larger.css">
     <link rel="icon" href="favicon-chamber.ico">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"> -->
 </head>
 
 <body class="homepage-body">
     <div id="banner" class="banner" role="alert">
-        <p> Join us on Friday at 7 a.m the meet and greet of Rizal Chamber of Commerce</p>
+        <p> Join us on Wednesday at 7 p.m the meet and greet of Rizal Chamber of Commerce</p>
         <button id="closeBanner" class="close-button" aria-label="Close">×</button>
     </div>
 
     <header>
         <!-- mobile view -->
         <button class="menu-btn" aria-label="Toggle menu button">
-            <i class="fa-solid fa-bars"></i>
+
         </button>
 
         <div class="logo-box">
@@ -45,25 +44,13 @@
 
         <nav class="header-nav">
             <ul class="nav-list">
-                <li><a href="index.html" class="nav-links"><i class="fa-solid fa-house"></i> HOME</a></li>
-                <li><a href="discover.html" class="nav-links"><i class="fa-solid fa-magnifying-glass"></i>
-                        DISCOVER</a></li>
-                <li><a href="directory.html" class="nav-links"><i class="fa-solid fa-folder"></i> DIRECTORY</a></li>
-                <li><a href="join.html" class="nav-links"><i class="fa-solid fa-user"></i> JOIN</a></li>
+                <li><a href="index.html" class="nav-links">HOME</a></li>
+                <li><a href="discover.html" class="nav-links">DISCOVER</a></li>
+                <li><a href="directory.html" class="nav-links">DIRECTORY</a></li>
+                <li><a href="join.html" class="nav-links">JOIN</a></li>
             </ul>
             <!-- dark mode -->
-            <div aria-label="Light and dark mode toggle switch" role="switch" aria-checked="false" tabindex="0">
-                <span class="switch">
-                    <span></span>
-                </span>
-                <span class="off" aria-hidden="true">
-                    <i class="fa-solid fa-sun"></i>
-                </span>
-
-                <span class="on" aria-hidden="true">
-                    <i class="fa-solid fa-moon"></i>
-                </span>
-            </div>
+            <div id="mode"> 🕶️ </div>
         </nav>
 
         <div class="header-box">
@@ -85,28 +72,22 @@
                     <a href="discover.html" role="button" class="btn-explore">DISCOVER</a>
                 </div>
             </div>
-
-            <!-- <div class="socials-box">
-                    <a href="" target="_blank"
-                        class="social-links" aria-label="Go to Rizal Chamber Facebook page">
-                        add icon here 
-                    </a>
-                    add other social for this page 
-                </div>-->
-
-            <div class="weather-box">
-                <h2>WEATHER</h2>
-                <div class="weather-info details">
-                    <p>Manila, Philippines</p>
-                    <p>Rizal Province - 1920</p>
-                    <p ><span id="current-temp"></span> <!-- add weather icon here --><span id="description"></span></p>
-                    <p><span id="windspeed"></span>Mph, Wind Speed</p>
-                    <p><span id="wind-direction"></span> Wind direction</p>
-                </div>
-            </div>
+            <div id="weather-boxx"></div>
         </div>
     </header>
     <main>
+        <!-- Member Showcase Section -->
+        <div id="members">
+            <h2 id="member-heading">Members</h2>
+            <section class="member">
+            </section>
+            <section class="member">
+            </section>
+            <section class="member">
+            </section>
+            <section class="member">
+            </section>
+        </div>
         <section class="news-event-section">
             <div class="news-event-section-box">
                 <div class="news-box">
@@ -141,25 +122,8 @@
                         <span class="event-time">Holiday Bazaar: ...</span>
                         <span class="event-time">Economic ...</span>
                     </div>
-
                 </div>
             </div>
-
-            <section class="partners">
-                <h2>Sponsors and Partners</h2>
-                <div class="partner-slide">
-                    <img src="#" alt="partner-1  logo" width="165" height="50">
-                    <img src="#" alt="partner-2 logo" width="165" height="40">
-                    <img src="#" alt="partner-3 logo" width="1650" height="272">
-                    <img src="#" alt="partner-4 logo" width="165" height="125">
-                </div>
-                <div class="partner-slide">
-                    <img src="#" alt="partner-1-store logo" width="165" height="50">
-                    <img src="#" alt="partner-2 logo" width="165" height="40">
-                    <img src="#" alt="partner-3 logo" width="165" height="272">
-                    <img src="#" alt="partner-4 logo" width="165" height="125">
-                </div>
-            </section>
         </section>
     </main>
     <footer>
