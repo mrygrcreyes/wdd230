@@ -919,7 +919,7 @@ iframe {
 }
 
 .asterisk {
-    color: red;
+    color: lime;
 }
 
 .form-container form input:not([type="radio"]) {
@@ -1054,6 +1054,7 @@ iframe {
 }
 
 .views-button-section button {
+    font-family: var(--paragraph-font);
     padding-block: .5em;
     padding-inline: 1em;
     border: none;
