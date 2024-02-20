@@ -37,7 +37,7 @@
         align-self: self-end;
     }
 
-    :where(nav ul, .nav-links, .cta-box) {
+    :where(nav ul, .nav-links, .shrtcut-box) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -79,45 +79,54 @@
         padding: 1.5rem 0;
     }
 
-    .cta-box {
+    .shrtcut-box {
         gap: var(--default-gap);
         justify-self: left;
     }
 
     .btn-join,
-    .btn-explore {
+    .btn-discover {
         padding: 0.25em 0.75em;
         min-width: 10ch;
         min-height: 4.4rem;
     }
 
-    .btn-explore:hover,
+    .btn-discover:hover,
     .btn-join:hover {
         transform: scale(1.1);
     }
 
-    .btn-explore:active,
+    .btn-discover:active,
     .btn-join:active {
         transform: scale(1);
     }
 
     .figure-box {
         transition: all .2s;
-        /* gap: 2rem; */
+    }
+
+    .figure-box-1 {
+        transition: all .2s;
     }
 
     .figure-box:hover {
         transform: translateY(-10px);
     }
 
+    .figure-box-1:hover {
+        transform: translateY(-10px);
+    }
+
     .news-event-section {
-        padding-block: 10em;
+        padding-top: 5em;
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 5em;
     }
 
     .news-event-section-box {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 5rem;
-        width: 90vw;
+        width: 60vw;
     }
 
     .news-box {
@@ -130,7 +139,6 @@
         place-items: center;
         gap: 2em;
         padding-block-end: 3em;
-
     }
 
     #weather-boxx {
@@ -150,71 +158,12 @@
         padding: 2rem;
     }
 
-    #members {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 0.2fr 1fr;
-        grid-gap: 1rem;
-        padding: 5rem;
-        text-align: center;
-        justify-items: center;
-        height: 20rem;
-        margin-bottom: 5rem;
-    }
-
-    #member-heading {
-        grid-column: 1 / 5;
-        grid-row: 1 / 2;
-        text-align: center;
-        font-size: 2rem;
-        color: var(--primary-color);
-    }
-
-    .member {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-areas:
-            "team-member-image"
-            "team-member-name"
-            "team-member-position";
-        grid-gap: 1rem;
-        padding: 1rem;
-        text-align: center;
-        height: 30rem;
-        align-items: center;
-        background: var(--glass-effect-bg);
-        width: 20em;
-        border-radius: 2rem;
-    }
-
-    .member img {
-        width: 50%;
-        height: auto;
-        grid-area: team-member-image;
-        justify-self: center;
-    }
-
-    .member h2 {
-        grid-area: team-member-name;
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        text-decoration: none;
-    }
-
-    .member p {
-        grid-area: team-member-position;
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: var(--primary-shade-2);
-    }
-
     footer:not(.copyright-box) {
         align-items: flex-start;
         flex-direction: row;
         flex-flow: wrap;
         text-align: left;
+        color: var(--primary-color);
     }
 
 
@@ -290,12 +239,12 @@
     }
 
     /* ---------------------- JOIN PAGE SECTION --------------- */
+
     .form-container {
         justify-content: space-evenly;
     }
 
     .form-container form input[type="submit"]:hover {
-        background-color: var(--secondary-color);
         color: var(--primary-color);
     }
 

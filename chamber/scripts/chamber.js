@@ -1,7 +1,15 @@
 "use strict";
 
+/// menu button for mobile view 
+
 const nav = document.querySelector('.header-nav');
 const menuBtn = document.querySelector('.menu-btn');
+
+menuBtn.addEventListener('click', () => {
+    nav.classList.toggle('open');
+    menuBtn.classList.toggle('open');
+});
+
 
 //  getting current date
 const date = new Date();
@@ -9,6 +17,7 @@ const date = new Date();
 let currentMonth = date.getMonth();
 // getting the current year
 let currentYear = date.getFullYear()
+
 
 //// Dark Mode
 const modeButton = document.querySelector("#mode");
@@ -26,79 +35,8 @@ modeButton.addEventListener("click", () => {
     }
 });
 
-//Spotlight
-
-const membersHTML = document.querySelectorAll('.member');
-const memberDataURL = "data/members.json";
-
-async function apiFetch() {
-    try {
-        const response = await fetch(memberDataURL);
-        if (response.ok) {
-            const memberData = await response.json();
-            displayResultsMembers(memberData);
-        }
-        else {
-            throw Error(await response.text());
-        }
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-apiFetch();
-
-// Choose 4 random members to display
-
-function displayResultsMembers(data) {
-    let indexChosen = [];
-    let randomMembers = [];
-    let randomMember;
-    for (let i = 0; i < 4; i++) {
-        randomMember = data.members[Math.floor(Math.random() * data.members.length)];
-        if ((randomMember.membership == "Gold" || randomMember.membership == "Silver") && !indexChosen.includes(randomMember)) {
-            randomMembers.push(randomMember);
-            indexChosen.push(randomMember);
-        }
-        else {
-            i--;
-        }
-    }
-    for (let i = 0; i < membersHTML.length; i++) {
-        const member = membersHTML[i];
-        const randomMember = randomMembers[i];
-        const memberName = document.createElement('h2');
-        memberName.textContent = randomMember.name;
-        member.appendChild(memberName);
-        const memberContent = document.createElement('div');
-        memberContent.classList.add('member-content');
-        const memberAddress = document.createElement('p');
-        memberAddress.textContent = randomMember.address;
-        memberContent.appendChild(memberAddress);
-        member.appendChild(memberContent);
-        const memberLink = document.createElement('a');
-        memberLink.setAttribute('href', randomMember.link);
-        memberLink.textContent = 'Learn More';
-        memberContent.appendChild(memberLink);
-
-        const memberImage = document.createElement('img');
-        imgLocation = "images/" + randomMember.logo;
-        memberImage.setAttribute('src', imgLocation);
-        memberImage.setAttribute('alt', randomMember.name);
-        memberImage.setAttribute("loading", "lazy");
-        member.appendChild(memberImage);
-
-
-
-    }
-}
-
-
 //// Current Weather and 3 Day Forecast
-
 const weather = document.querySelector('#weather-boxx');
-
 
 const url = 'https://api.openweathermap.org/data/2.5/weather?lat=14.59832&lon=120.98659&appid=0b6396ec51390424c164a6782f787117&units=imperial';
 const forecast_url = 'https://api.openweathermap.org/data/2.5/forecast?lat=14.59832&lon=120.98659&cnt=3&appid=0b6396ec51390424c164a6782f787117&units=imperial';
@@ -152,11 +90,8 @@ function displayResults(data, forecast) {
     tableDataCurr.innerHTML = `${data.weather[0].description}`;
     tableRowCurr.appendChild(tableDataCurr);
 
-
     tableBodyCurr.appendChild(tableRowCurr);
     tableCurr.appendChild(tableBodyCurr);
-
-
 
     //Create Table with 3 day forecast
     let table = document.createElement('table');
@@ -189,7 +124,7 @@ function displayResults(data, forecast) {
 
 }
 
-// // Initialize switches
+//// Initialize switches
 window.addEventListener('load', function () {
     // Initialize the Switch component on all matching DOM nodes
     Array.from(document.querySelectorAll('[role^=switch]')).forEach(
@@ -199,6 +134,7 @@ window.addEventListener('load', function () {
     );
     displayChamberMembers();
 });
+
 
 // Displaying Chamber members and there membership status
 function displayChamberMembers() {
@@ -276,9 +212,8 @@ function toggleNav() {
 }
 toggleNav();
 
-// ///////////////////////////////////////////////
-// The active page functionality - highlight the current  active 
-// page
+
+/// The active page functionality - highlight the current  active page
 function activePage() {
 
     function setActiveLink() {
@@ -297,7 +232,7 @@ function activePage() {
 }
 activePage();
 
-/////// Meetup banner
+///// Meetup banner
 
 function meetupBanner() {
     const date = new Date();
@@ -315,7 +250,7 @@ function meetupBanner() {
 }
 meetupBanner();
 
-// ////////////////////////////////////////////////////////////
+/// last modify date and time
 function displayDate() {
     const theYear = document.querySelector('#year');
     const lastModify = document.querySelector('.last-modify');
@@ -340,7 +275,7 @@ function displayDate() {
 };
 displayDate();
 
-//DISCOVER HTML -- DATE & TIME 
+/// discover page - message box  ////
 function feedbackMessage() {
     const messageBox = document.querySelector('.message-box');
 
@@ -375,12 +310,9 @@ function feedbackMessage() {
 feedbackMessage();
 
 
-// /////////////////////////////////////////////////////////
-// // function for rendering the days in the calendar
+//// discover page - dislapy calender 
 function displayCalender() {
     const daysContainer = document.querySelector(".days");
-    // const nextMonthBtn = document.querySelector(".next-btn");
-    const prevMonthBtn = document.querySelector(".prev-btn");
     const month = document.querySelector(".the-date");
     const todayBtn = document.querySelector('.today');
 
@@ -443,30 +375,6 @@ function displayCalender() {
         daysContainer.innerHTML = days;
     }
     renderCalender();
-
-    // nextMonthBtn.addEventListener('click', () => {
-    //     // increase the current month by one
-    //     currentMonth++
-    //     if (currentMonth > 11) {
-    //         // if current month is greater 11, set it zero and increase year by one
-    //         currentMonth = 0;
-    //         currentYear++
-    //     }
-    //     // render calendar
-    //     renderCalender();
-    // });
-
-    // prevMonthBtn.addEventListener("click", () => {
-    //     // decrease by one
-    //     currentMonth--;
-    //     // checking if it's less than 0 set it to 11 and decrease year
-    //     if (currentMonth < 0) {
-    //         currentMonth = 11;
-    //         currentYear--;
-    //     }
-    //     // render calendar
-    //     renderCalender();
-    // });
 
     // go to today
     todayBtn.addEventListener('click', () => {
